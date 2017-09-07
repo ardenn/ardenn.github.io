@@ -1,10 +1,10 @@
 # Welcome to my personal website
-### Name: Ouma Rodgers
+![rodgers]() 
+### Ouma Rodgers
 ___
 
 ## Contents
-[Home Page](https://ardenn.github.io)
-___
+[Home Page](https://ardenn.github.io):house:
 
 * Personal Info
 * Educational Info
@@ -13,8 +13,7 @@ ___
 * Other Information 
 * Hobbies
 
-[Founder Story](https://ardenn.github.io/founder)
-___
+[Founder Story](https://ardenn.github.io/founder):bank:
 
 * Why MEST
 * Why Entrepreneurship
@@ -22,7 +21,12 @@ ___
 * What am good at
 * What i hope to achieve at MEST 
 
-[Blog](https://ardenn.github.io/blog)
-___
+[Blog](https://ardenn.github.io/blog):newspaper:
 	
 * Announcement on MEST entry
+
+### Contact Me
+Platform | Handle
+------------ | -------------
+Twitter | [@mc_alila](https://twitter.com/mc_alila)
+Facebook | [Rodgers](https://www.facebook.com/rodgers.ouma.3)
