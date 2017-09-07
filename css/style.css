@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/GothamRounded-Medium.otf") format("opentype");
+}
+body{
+	margin: unset;
+	font-family: Gotham;
+	/*background: url("../images/mouse.jpg");*/
+}
+#header{
+	padding-top:20px;
+	padding-bottom: 20px;
+	text-align: center;
+	background: #E1E2E9;
+/*	margin: 10px 20px 0px 20px;
+	border-radius: 10px;*/
+}
+#tagline{
+	font-family: Gotham;
+}
+#header .title{
+	font-weight: bolder;
+	font-size: 35pt;
+	margin: unset;
+	padding-bottom: 10px;
+}
+#header .sub-title{
+	font-style: italic;
+	font-weight: lighter;
+	margin: unset;
+}
+nav .menu-nav li{
+	display: inline;
+	padding: 0px 10px;
+	font-size: 16pt;
+	font-weight: bolder;
+	border-right: 2px solid #000;
+}
+nav .menu-nav li:last-child{
+	border-right: none;
+}
+#menu{
+	padding-top: 50px;
+}
+a {
+	text-decoration: unset;
+	color: #0000FF;
+}
+.row {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.tile {
+	width: 45%;
+	height: 500px;
+	margin: 20px;
+	display: inline-block;
+	padding: 10px;
+	line-height: 200%;
+	font-size: 18px;
+	overflow-y: auto;
+}
+.tile ul{
+	list-style: lower-roman;
+}
+hr {
+	border: 2px solid #000fff;
+}
+footer{
+	text-align: center;
+	bottom: 10px;
+	font-weight: bold;
+	background: #E1E2E9;
+	padding: 20px;
+}
+table{
+	column-width: auto;
+	text-align: left;
+	border-spacing: 5px;
+}
+td{
+	vertical-align: top;
+}
+#social-media li{
+	display: inline;
+	list-style: none;
+	padding: 20px;
+}
+button {
+	border: 2px solid #000fff;
+	background: transparent;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 16pt;
+	font-family: Gotham;
+	font-weight: bold;
+}
+.image-fit{
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+	border-radius: 10px;
+}
+section .post{
+	width: 60%;
+	margin: 0 auto;
+	min-height: 800px;
+}
+.post-content{
+	padding: 10px 10px;
+	line-height: 200%;
+}
+#landing .tile{
+	background: #E1E2E9;
+	padding: 10px;
+	border-radius: 5px;
+}
+#founders .tile{
+	height: 400px;
+}
+blockquote {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0.25em 0;
+    padding: 0.35em 40px;
+    position: relative;
+    color: #000;
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    color: #000;
+}
+.tile-title{
+	color: #000fff;
+}
