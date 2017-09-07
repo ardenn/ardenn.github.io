@@ -1,5 +1,5 @@
 # Welcome to my personal website
-![rodgers]() 
+![rodgers](images/roja.jpg) 
 ### Ouma Rodgers
 ___
 
