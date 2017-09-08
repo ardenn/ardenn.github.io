@@ -112,7 +112,7 @@ section .post{
 	line-height: 200%;
 }
 #landing .tile{
-	background: #E1E2E9;
+	/*background: #E1E2E9;*/
 	padding: 10px;
 	border-radius: 5px;
 }
