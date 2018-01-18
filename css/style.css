@@ -1,143 +1,133 @@
-@font-face {
-    font-family: "Gotham";
-    src: url("../fonts/GothamRounded-Medium.otf") format("opentype");
+body {
+    font-family: "Nunito";
+    margin-top: 50px;
+    font-size: 20px;
 }
-body{
-	margin: unset;
-	font-family: Gotham;
-	/*background: url("../images/mouse.jpg");*/
+.intro {
+    font-weight: bold;
 }
-#header{
-	padding-top:20px;
-	padding-bottom: 20px;
-	text-align: center;
-	background: #E1E2E9;
-/*	margin: 10px 20px 0px 20px;
-	border-radius: 10px;*/
+.name {
+    font-weight: bolder;
+    font-size: 40px;
 }
-#tagline{
-	font-family: Gotham;
+.description {
+    color: #A6918A;
+    padding: 10px 0px 10px 0px;
 }
-#header .title{
-	font-weight: bolder;
-	font-size: 35pt;
-	margin: unset;
-	padding-bottom: 10px;
+.page-section {
+    padding-bottom: 10px;
 }
-#header .sub-title{
-	font-style: italic;
-	font-weight: lighter;
-	margin: unset;
-}
-nav .menu-nav li{
-	display: inline;
-	padding: 0px 10px;
-	font-size: 16pt;
-	font-weight: bolder;
-	border-right: 2px solid #000;
-}
-nav .menu-nav li:last-child{
-	border-right: none;
-}
-#menu{
-	padding-top: 50px;
-}
-a {
-	text-decoration: unset;
-	color: #0000FF;
-}
-.row {
-	width: 100%;
-	display: block;
-	margin: 0 auto;
-}
-.tile {
-	width: 45%;
-	height: 500px;
-	margin: 20px;
-	display: inline-block;
-	padding: 10px;
-	line-height: 200%;
-	font-size: 18px;
-	overflow-y: auto;
-}
-.tile ul{
-	list-style: lower-roman;
-}
-hr {
-	border: 2px solid #000fff;
-}
-footer{
-	text-align: center;
-	bottom: 10px;
-	font-weight: bold;
-	background: #E1E2E9;
-	padding: 20px;
-}
-table{
-	column-width: auto;
-	text-align: left;
-	border-spacing: 5px;
-}
-td{
-	vertical-align: top;
-}
-#social-media li{
-	display: inline;
-	list-style: none;
-	padding: 20px;
-}
-button {
-	border: 2px solid #000fff;
-	background: transparent;
-	border-radius: 5px;
-	padding: 20px;
-	font-size: 16pt;
-	font-family: Gotham;
-	font-weight: bold;
-}
-.image-fit{
-	max-width: 100%;
-	max-height: 100%;
-	vertical-align: middle;
-	border-radius: 10px;
-}
-section .post{
-	width: 60%;
-	margin: 0 auto;
-	min-height: 800px;
-}
-.post-content{
-	padding: 10px 10px;
-	line-height: 200%;
-}
-#landing .tile{
-	/*background: #E1E2E9;*/
-	padding: 10px;
-	border-radius: 5px;
-}
-#founders .tile{
-	height: 400px;
-}
-blockquote {
-    font-size: 18px;
-    font-style: italic;
-    margin: 0.25em 0;
-    padding: 0.35em 40px;
-    position: relative;
-    color: #000;
+#main-nav {
+    padding-bottom: 40px;
 }
 
-blockquote:before {
-    display: block;
-    padding-left: 10px;
-    content: "\201C";
-    font-size: 80px;
-    position: absolute;
-    left: -20px;
-    top: 20px;
-    color: #000;
+.card {
+    padding: 20px;
 }
-.tile-title{
-	color: #000fff;
+.card-text {
+    padding: 40px 0px 40px 0px;
+    color: #A6918A;
+}
+.expertise {
+    font-size: 100px;
+}
+.titles {
+    font-size: 40px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+.subtitles {
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+a:hover {
+    text-decoration: unset;
+}
+a {
+    font-weight: bold;
+}
+.works {
+    font-size: 70px;
+}
+.card-title {
+    padding: 30px 0px 20px 0px;
+    font-weight: bold;
+    font-size: 25px;
+}
+kbd {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    padding: 10px 5px 10px 5px;
+    background-color: #D0D0D0;
+}
+#about{
+    width: 100%;
+    padding-bottom: 40px;
+    background: linear-gradient(to bottom, white, #F2F2F2);
+}
+.education {
+    font-size: 100px;
+    padding-right: 200px;
+}
+.subsection {
+    padding-bottom: 70px;
+}
+.bar-title {
+    font-weight: bold;
+    font-size: 15px;
+}
+.bars {
+    padding: 50px 20px 0px 20px;
+}
+.q-title {
+    font-weight: bold;
+    font-size: 25px;4
+    padding: 20px 5px 20px 5px;
+}
+.q-subtitle {
+    font-size: 20px;
+}
+.q-date {
+    font-size: 20px;
+}
+.q-details {
+    border-left: 4px solid #0275D8;
+    padding-left: 40px;
+}
+#expertise .lnr {
+    color: #0275D8;
+}
+#contact .lnr {
+    font-weight: bold;
+}
+#contact-me {
+    background-color: #F2F2F2; 
+    padding: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.form-control {
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+    font-family: Nunito;
+}
+.contact-details {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.contact-h {
+    font-weight: bold;
+    font-size: 25px;
+}
+#social-list li {
+    list-style: none;
+    padding: 20px;
+}
+#social-list li a {
+    color: unset;
+}
+footer {
+    padding-top: 40px;
 }
