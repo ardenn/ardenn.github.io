@@ -1,101 +1,184 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-    <!-- Meta Info -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Ouma Rodgers - The first of his name">
-    <meta name="author" content="Rodgers Ouma Mc'Alila">
-    <meta name="keywords" content="rodgers ouma personal website">
+  <!-- Meta Info -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Ouma Rodgers - The first of his name">
+  <meta name="author" content="Rodgers Ouma Mc'Alila">
+  <meta name="keywords" content="rodgers ouma personal website">
+  <link rel="icon" href="images/favicon.ico">
 
-    <title>Ouma Rodgers - The first of his name</title>
+  <title>Ouma Rodgers - The first of his name</title>
 
-    <!-- Fontfaces CSS-->
-    <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" media="all">
+  <!-- Fontfaces CSS-->
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <!-- Font Awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 
-    <!-- Linear Icons -->
-    <link rel="stylesheet" href="linear-fonts/linear.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Linear Icons -->
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
+
 <body>
 
   <!-- Nav bar Top -->
-   <div class="container">
-       <div class="row">
-           <div class="col-sm-12">
-               <nav id="main-nav">
-                   <ul class="nav flex-column flex-sm-row justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#about">About Me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#expertise">Expertise</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#education">Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#progress">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-               </nav>
-            </div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-sm-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#expertise" onclick="slowScroll(this);return false;">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#progress" onclick="slowScroll(this);return false">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience" onclick="slowScroll(this);return false">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education" onclick="slowScroll(this);return false">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" onclick="slowScroll(this);return false">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main body -->
+  <main id="content">
+    <!-- About Section -->
+    <section id="about" class="page-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm" style="padding-top:120px;">
+            <p class="intro">Hello, my name is</p>
+            <p class="name">Ouma Rodgers</p>
+            <p class="description">I am a Software Developer, Risk Analyst and aspiring Data Scientist, from
+              <span class="intro">Homa Bay, Kenya</span>
+            </p>
+            <a class="btn btn-primary" href="#portfolio" onclick="slowScroll(this);return false">See My Work</a>
+            <a class="btn btn-success" href="https://www.dropbox.com/s/z2iy6ifjdlq1jl5/RodgersOuma.pdf?dl=1" download>
+              <i class="fa fa-download"></i> Resume</a>
+          </div>
+          <div class="col-sm">
+            <img class="img-fluid" src="images/new.png" alt="rodgers" style="padding-top:20px;">
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- About Section -->
-      <section id="about" class="container page-section">
-         <div class="row" style="padding-left: 105.5px;padding-right: 105.5px;">
-             <div class="col-sm">
-                 <p class="intro">Hello, my name is</p>
-                 <p class="name">Ouma Rodgers</p>
-                 <p class="description">I am a Software Developer, Risk Analyst and aspiring Data Scientist</p>
-                 <button class="btn btn-lg btn-primary">See My Works</button>
-             </div>
-             <div class="col-sm">
+    <!-- Expert In -->
+    <section class="page-section" id="expertise">
+      <div class="container">
+        <p class="titles">Services</p>
+        <div class="row">
+          <div class="col-sm text-center">
+            <span class="lnr lnr-code expertise"></span>
+            <p class="subtitles">Software Development</p>
+            <p class="description">
+              I build quality software for the web, mobile and desktop employing the latest of technologies.
+            </p>
+            <a href="#portfolio" class="btn btn-primary" onclick="slowScroll(this);return false;">View Works</a>
+          </div>
+          <div class="col-sm text-center">
+            <span class="lnr lnr-chart-bars expertise"></span>
+            <p class="subtitles">Data Analysis</p>
+            <p class="description">I love speaking through facts, figures and numbers, fuelled by my high affinity for data, and statistics.
+            </p>
+            <a href="#portfolio" class="btn btn-primary" onclick="slowScroll(this);return false;">View Works</a>
+          </div>
+          <div class="col-sm text-center">
+            <span class="lnr lnr-heart-pulse expertise"></span>
+            <p class="subtitles">Risk Management</p>
+            I am a risk and actuarial analyst by profession, specifically with regards to the insurance sector.
+            <p class="description">
+            </p>
+            <a href="#portfolio" class="btn btn-primary" onclick="slowScroll(this);return false;">View Works</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-             </div>
-         </div>
-      </section>
-
-      <!-- Expert In -->
-      <section class="page-section" id="expertise">
-        <div class="container">
-          <p class="titles">Expert In</p>
-          <div class="row">
-            <div class="col-sm text-center">
-              <span class="lnr lnr-code expertise"></span>
-              <p class="subtitles">Software Development</p>
-              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#">View Works</a>
+    <!-- Skills -->
+    <section class="page-section" id="progress">
+      <div class="container">
+        <p class="titles">Technical Skills</p>
+        <div class="row">
+          <div class="col-sm">
+            <div class="bars">
+              <p class="bar-title">Python</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;height: 20px;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
-            <div class="col-sm text-center">
-              <span class="lnr lnr-chart-bars expertise"></span>
-              <p class="subtitles">Data Analysis</p>
-              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#">View Works</a>
+            <div class="bars">
+              <p class="bar-title">JavaScript</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 60%;height: 20px;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
-            <div class="col-sm text-center">
-              <span class="lnr lnr-heart-pulse expertise"></span>
-              <p class="subtitles">Risk Management</p>
-              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#">View Works</a>
+            <div class="bars">
+              <p class="bar-title">HTML & CSS</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 95%;height: 20px;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="bars">
+              <p class="bar-title">Flask & Django</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 70%;height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="bars">
+              <p class="bar-title">Data Wrangling</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%;height: 20px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="bars">
+              <p class="bar-title">Exploratory Data Analysis</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%;height: 20px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="bars">
+              <p class="bar-title">Data Visualization</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 40%;height: 20px;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="bars">
+              <p class="bar-title">Machine Learning</p>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%;height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
     <!-- Experience Section -->
@@ -108,20 +191,11 @@
               <img class="card-img-top" src="images/mest.png" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">E.I.T.</h5>
-                <h6 class="card-subtitle mb-2 text-muted"><kbd>August 2017 - To Date</kbd></h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Website</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm text-center">
-            <div class="card">
-              <img class="card-img-top" src="images/loop.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Data Analyst</h5>
-                <h6 class="card-subtitle mb-2 text-muted"><kbd>May 2017 - Aug 2017</kbd></h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Website</a>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <kbd>August 2017 - To Date</kbd>
+                </h6>
+                <p class="card-text">Presently an Entrepreneur-In-Training at Meltwater Entrepreneurial School of Technology, Accra, Ghana.</p>
+                <a href="http://www.meltwater.org" target="blank" class="btn btn-primary">Website</a>
               </div>
             </div>
           </div>
@@ -130,9 +204,24 @@
               <img class="card-img-top" src="images/loop.png" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Operations Assistant</h5>
-                <h6 class="card-subtitle mb-2 text-muted"><kbd>Oct 2016 - May 2017</kbd></h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Website</a>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <kbd>May 2017 - Aug 2017</kbd>
+                </h6>
+                <p class="card-text">Worked briefly in the Funds Transfer Department of Commercial Bank of Africa, Nairobi, Kenya</p>
+                <a href="http://cbagroup.com/" class="btn btn-primary">Website</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm text-center">
+            <div class="card">
+              <img class="card-img-top" src="images/loop.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Intern</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <kbd>Oct 2016 - May 2017</kbd>
+                </h6>
+                <p class="card-text">Worked in Product Development, and Data Analysis at Commercial Bank of Africa, Nairobi, Kenya.</p>
+                <a href="http://cbagroup.com/" class="btn btn-primary">Website</a>
               </div>
             </div>
           </div>
@@ -169,73 +258,49 @@
       </div>
     </section>
 
-    <!-- Skills -->
-    <section class="page-section" id="progress">
+    <!-- Portfolio Section -->
+    <section class="page-section" id="portfolio">
       <div class="container">
-        <p class="titles">Technical Skills</p>
+        <p class="titles">Portfolio</p>
         <div class="row">
           <div class="col-sm">
-            <div class="bars">
-               <p class="bar-title">Python</p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;height: 20px;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-            <div class="bars">
-               <p class="bar-title">JavaScript</p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 60%;height: 20px;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-            <div class="bars">
-               <p class="bar-title">HTML & CSS</p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 95%;height: 20px;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-            <div class="bars">
-               <p class="bar-title">Flask & Django</p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 70%;height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">MEST Capstone 1</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <kbd>Nov 2017 - Dec 2017</kbd>
+                </h6>
+                <p class="card-text">As an E.I.T. I participated in and developed the idea of FeedHub, a solution to improve feedback collection</p>
+                <a href="http://www.meltwater.org" class="btn btn-primary">Website</a>
+              </div>
             </div>
           </div>
           <div class="col-sm">
-            <div class="bars">
-               <p class="bar-title">Data Wrangling</p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 50%;height: 20px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">CryptoWatcher</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <kbd>January 2018</kbd>
+                </h6>
+                <p class="card-text">Application to monitor different exchanges for real time prices of crypto currencies</p>
+                <a href="https://github.com/ardenn/crypto-market-watcher" target="blank" class="btn btn-primary">Website</a>
+              </div>
             </div>
-            <div class="bars">
-               <p class="bar-title">Exploratory Data Analysis</p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 50%;height: 20px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-            <div class="bars">
-               <p class="bar-title">Data Visualization</p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 40%;height: 20px;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-            <div class="bars">
-               <p class="bar-title">Machine Learning</p>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%;height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">GODIN HSMIS</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <kbd>June 2016 - August 2017</kbd>
+                </h6>
+                <p class="card-text">A software solution to provide management, and record-keeping for Kenyan High Schools</p>
+                <a href="https://www.youtube.com/watch?v=kPR45XVKryc" target="blank" class="btn btn-primary">Website</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="page-section" id="portfolio">
-      <div class="container">
-        <div class="row">
-        </div>
-      </div>  
     </section>
 
     <!-- Contact Me -->
@@ -269,46 +334,71 @@
         </div>
         <div class="row contact-details">
           <div class="col-sm text-center">
-            <p class="contact-h"><span class="lnr lnr-home"></span> Address</p>
-            <p>Accra, Ghana</p>
+            <p class="contact-h">
+              <span class="lnr lnr-home"></span> Address</p>
+            <p>Accra | Ghana</p>
           </div>
           <div class="col-sm text-center">
-            <p class="contact-h"><span class="fa fa-whatsapp"></span> Lets Chat</p>
+            <p class="contact-h">
+              <span class="fa fa-whatsapp"></span> Lets Chat</p>
             <p>+254 70 003 5576</p>
           </div>
           <div class="col-sm text-center">
-            <p class="contact-h"><span class="lnr lnr-envelope"></span> Email</p>
+            <p class="contact-h">
+              <span class="lnr lnr-envelope"></span> Email</p>
             <a href="mailto:rodgers.ouma@meltwater.org">rodgers.ouma@meltwater.org</a>
           </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer id="footer" class="page-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <p style="padding: 20px;"><span class="fa fa-copyright"></span> Copyright 2018</p>
-          </div>
-          <div class="col-sm">
-            <ul id="social-list" class="nav flex-sm-row justify-content-end">
-              <li class="list-item"><a href="#" target="" class="fa fa-facebook"></a></li>
-              <li class="list-item"><a href="#" target="" class="fa fa-twitter"></a></li>
-              <li class="list-item"><a href="#" target="" class="fa fa-linkedin"></a></li>
-              <li class="list-item"><a href="#" target="" class="fa fa-github"></a></li>
-              <li class="list-item"><a href="#" target="" class="fa fa-instagram"></a></li>
-            </ul>
-          </div>
+  <!-- Footer -->
+  <footer id="footer" class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <p style="padding: 20px;">
+            <span class="fa fa-copyright"></span> Copyright 2018</p>
+            <p><span id="days"></span><span id="hours"></span><span id="minutes"></span><span id="seconds"></span></p>
+        </div>
+        <div class="col-sm">
+          <ul id="social-list" class="nav flex-sm-row justify-content-end">
+            <li class="list-item">
+              <a href="https://www.facebook.com/rodgers.ouma.3" target="blank" class="fa fa-facebook"></a>
+            </li>
+            <li class="list-item">
+              <a href="https://twitter.com/mc_alila" target="blank" class="fa fa-twitter"></a>
+            </li>
+            <li class="list-item">
+              <a href="https://www.linkedin.com/in/rodgers-ouma/" target="blank" class="fa fa-linkedin"></a>
+            </li>
+            <li class="list-item">
+              <a href="https://github.com/ardenn" target="blank" class="fa fa-github"></a>
+            </li>
+            <li class="list-item">
+              <a href="https://www.instagram.com/mc_alila/" target="blank" class="fa fa-instagram"></a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
+  <button class="btn rounded-circle" id="top-scroll" onclick="upScroll()">
+    <i class="fa fa-chevron-up"></i>
+  </button>
 
-<!-- jQuery -->
-<script type="text/javascript" src="js/jquery.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
 
-<!-- Bootstrap JS -->
-<script type="text/javascript" src="bootstrap/js/tether.min.js"></script>
-<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="js/website.js"></script>
+  <script src="js/moment.js"></script>
 </body>
+
 </html>
