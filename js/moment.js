@@ -17,13 +17,13 @@ function launchCountDown(date) {
         seconds = Math.floor(remainder / msPerSecond);
 
         let startTimer = setInterval(() => {
-            if (seconds === 0) {
+            if (seconds === 0 && minutes > 0) {
                 seconds = 59
                 minutes--
-                if (minutes === 0) {
+                if (minutes === 0 && hours > 0) {
                     minutes = 59
                     hours--
-                    if (hours === 0) {
+                    if (hours === 0 && days > 0) {
                         hours = 23
                         days--
                     }
@@ -42,4 +42,4 @@ function launchCountDown(date) {
         }
     }
 }
-launchCountDown("February 05 2018 18:25")
+launchCountDown("February 05 2018 18:28")
