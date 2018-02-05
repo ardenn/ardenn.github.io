@@ -9,7 +9,7 @@ function launchCountDown(date) {
 
     remainder = (futureDate - today);
     if (remainder <= 0) {
-        [days, hours, minutes, seconds] = [0, 0, 0, 0]
+        [days, hours, minutes, seconds] = [0, 0, 0, 0];
     } else {
         let startTimer = setInterval(() => {
             if (seconds === 0) {
@@ -41,4 +41,4 @@ function launchCountDown(date) {
         }
     }
 }
-launchCountDown("February 05 2018 18:17")
+launchCountDown("February 05 2018 18:20")
