@@ -10,6 +10,10 @@ function launchCountDown(date) {
     remainder = (futureDate - today);
     if (remainder <= 0) {
         [days, hours, minutes, seconds] = [0, 0, 0, 0];
+        document.getElementById("minutes").textContent = ` ${minutes} Minutes`
+        document.getElementById("hours").textContent = ` ${hours} Hours`
+        document.getElementById("days").textContent = ` ${days} Days`
+        document.getElementById("seconds").textContent = ` ${seconds} Seconds`
     } else {
         [days, remainder] = [Math.floor(remainder / msPerDay), remainder % msPerDay];
         [hours, remainder] = [Math.floor(remainder / msPerHour), remainder % msPerHour];
