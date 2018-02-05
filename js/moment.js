@@ -1,3 +1,24 @@
+let startTimer = setInterval(() => {
+    if (seconds === 0) {
+        seconds = 59
+        minutes--
+        if (minutes === 0) {
+            minutes = 59
+            hours--
+            if (hours === 0) {
+                hours = 23
+                days--
+            }
+        }
+    } else {
+        seconds--
+    }
+    document.getElementById("minutes").textContent = ` ${minutes} Minutes`
+    document.getElementById("hours").textContent = ` ${hours} Hours`
+    document.getElementById("days").textContent = ` ${days} Days`
+    document.getElementById("seconds").textContent = ` ${seconds} Seconds`
+}, 1000)
+
 function launchCountDown(date) {
     const futureDate = new Date(date)
     const today = new Date()
@@ -8,34 +29,14 @@ function launchCountDown(date) {
     let days, hours, minutes, seconds
 
     if (seconds === 0 & days === 0) {
-        clearInterval()
+        clearInterval(startTimer);
     }
-
+    startTimer();
     remainder = (futureDate - today);
     [days, remainder] = [Math.floor(remainder / msPerDay), remainder % msPerDay];
     [hours, remainder] = [Math.floor(remainder / msPerHour), remainder % msPerHour];
     [minutes, remainder] = [Math.floor(remainder / msPerMinute), remainder % msPerMinute];
     seconds = Math.floor(remainder / msPerSecond);
 
-    setInterval(() => {
-        if (seconds === 0) {
-            seconds = 59
-            minutes--
-            if (minutes === 0) {
-                minutes = 59
-                hours--
-                if (hours === 0) {
-                    hours = 23
-                    days--
-                }
-            }
-        } else {
-            seconds--
-        }
-        document.getElementById("minutes").textContent = ` ${minutes} Minutes`
-        document.getElementById("hours").textContent = ` ${hours} Hours`
-        document.getElementById("days").textContent = ` ${days} Days`
-        document.getElementById("seconds").textContent = ` ${seconds} Seconds`
-    }, 1000)
 }
 launchCountDown("February 05 2018 16:00")
