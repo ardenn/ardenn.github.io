@@ -46,4 +46,4 @@ function launchCountDown(date) {
         }
     }
 }
-launchCountDown("February 05 2018 18:40")
+launchCountDown("February 05 2018 18:50")
