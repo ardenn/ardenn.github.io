@@ -36,7 +36,7 @@ function launchCountDown(date) {
         [minutes, remainder] = [Math.floor(remainder / msPerMinute), remainder % msPerMinute];
         seconds = Math.floor(remainder / msPerSecond);
 
-        if (seconds === 0 & days === 0) {
+        if (seconds == 0 && days == 0 && hours == 0 && minutes == 0) {
             clearInterval(startTimer);
         }
     }
