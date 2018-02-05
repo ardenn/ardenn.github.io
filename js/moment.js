@@ -32,7 +32,7 @@ function launchCountDown(date) {
                         days--
                     }
                 }
-            } else {
+            } else if (seconds > 0) {
                 seconds--
             }
             document.getElementById("minutes").textContent = ` ${minutes} Minutes`
