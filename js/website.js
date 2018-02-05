@@ -38,4 +38,4 @@ window.onscroll = () => {
         document.getElementById("top-scroll").style.display = "none";
     }
 }
-upScroll = () => keepScrollingUp(0, .5)
+upScroll = () => keepScrollingUp(0, .1)
