@@ -31,12 +31,15 @@ function launchCountDown(date) {
     if (seconds === 0 & days === 0) {
         clearInterval(startTimer);
     }
-    startTimer();
     remainder = (futureDate - today);
-    [days, remainder] = [Math.floor(remainder / msPerDay), remainder % msPerDay];
-    [hours, remainder] = [Math.floor(remainder / msPerHour), remainder % msPerHour];
-    [minutes, remainder] = [Math.floor(remainder / msPerMinute), remainder % msPerMinute];
-    seconds = Math.floor(remainder / msPerSecond);
-
+    if (remainder <= 0) {
+        [days, hours, minutes, seconds] = [0, 0, 0, 0]
+    } else {
+        startTimer()
+        [days, remainder] = [Math.floor(remainder / msPerDay), remainder % msPerDay];
+        [hours, remainder] = [Math.floor(remainder / msPerHour), remainder % msPerHour];
+        [minutes, remainder] = [Math.floor(remainder / msPerMinute), remainder % msPerMinute];
+        seconds = Math.floor(remainder / msPerSecond);
+    }
 }
-launchCountDown("February 05 2018 16:00")
+launchCountDown("February 05 2018 18:12")
