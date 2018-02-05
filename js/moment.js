@@ -11,6 +11,11 @@ function launchCountDown(date) {
     if (remainder <= 0) {
         [days, hours, minutes, seconds] = [0, 0, 0, 0];
     } else {
+        [days, remainder] = [Math.floor(remainder / msPerDay), remainder % msPerDay];
+        [hours, remainder] = [Math.floor(remainder / msPerHour), remainder % msPerHour];
+        [minutes, remainder] = [Math.floor(remainder / msPerMinute), remainder % msPerMinute];
+        seconds = Math.floor(remainder / msPerSecond);
+
         let startTimer = setInterval(() => {
             if (seconds === 0) {
                 seconds = 59
@@ -30,11 +35,7 @@ function launchCountDown(date) {
             document.getElementById("hours").textContent = ` ${hours} Hours`
             document.getElementById("days").textContent = ` ${days} Days`
             document.getElementById("seconds").textContent = ` ${seconds} Seconds`
-        }, 1000)
-        [days, remainder] = [Math.floor(remainder / msPerDay), remainder % msPerDay];
-        [hours, remainder] = [Math.floor(remainder / msPerHour), remainder % msPerHour];
-        [minutes, remainder] = [Math.floor(remainder / msPerMinute), remainder % msPerMinute];
-        seconds = Math.floor(remainder / msPerSecond);
+        }, 1000);
 
         if (seconds == 0 && days == 0 && hours == 0 && minutes == 0) {
             clearInterval(startTimer);
