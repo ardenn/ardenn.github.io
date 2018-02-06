@@ -24,9 +24,9 @@ function slowScroll(item) {
     let reverse = (targetPosition - currentPosition) < 0 ? true : false
 
     if (reverse) {
-        keepScrollingUp(targetPosition, 10)
+        keepScrollingUp(targetPosition, 5)
     } else {
-        keepScrollingDown(targetPosition, 10)
+        keepScrollingDown(targetPosition, 5)
     }
 };
 

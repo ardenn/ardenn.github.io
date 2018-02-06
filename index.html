@@ -2,22 +2,13 @@
 <html>
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113569257-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-113569257-1');
-  </script>
 
   <!-- Meta Info -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Ouma Rodgers - The first of his name">
   <meta name="author" content="Rodgers Ouma Mc'Alila">
-  <meta name="keywords" content="rodgers ouma mc'alila personal website">
+  <meta name="keywords" content="rodgers ouma personal website">
   <link rel="icon" href="images/favicon.ico">
 
   <title>Ouma Rodgers - The first of his name</title>
@@ -70,7 +61,7 @@
             <a class="nav-link" href="#contact" onclick="slowScroll(this);return false">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://medium.com/@mc_alila" target="blank">Blog</a>
+            <a class="nav-link" href="https://medium.com/@mc_alila" target="_blank">Blog</a>
           </li>
         </ul>
       </div>
@@ -207,7 +198,7 @@
                   <kbd>August 2017 - To Date</kbd>
                 </h6>
                 <p class="card-text">Presently an Entrepreneur-In-Training at Meltwater Entrepreneurial School of Technology, Accra, Ghana.</p>
-                <a href="http://www.meltwater.org" target="blank" class="btn btn-primary">Website</a>
+                <a href="http://www.meltwater.org" target="_blank" class="btn btn-primary">Website</a>
               </div>
             </div>
           </div>
@@ -295,7 +286,7 @@
                   <kbd>January 2018</kbd>
                 </h6>
                 <p class="card-text">Application to monitor different exchanges for real time prices of crypto currencies</p>
-                <a href="https://github.com/ardenn/crypto-market-watcher" target="blank" class="btn btn-primary">Website</a>
+                <a href="https://github.com/ardenn/crypto-market-watcher" target="_blank" class="btn btn-primary">Website</a>
               </div>
             </div>
           </div>
@@ -307,7 +298,7 @@
                   <kbd>June 2016 - August 2017</kbd>
                 </h6>
                 <p class="card-text">A software solution to provide management, and record-keeping for Kenyan High Schools</p>
-                <a href="https://www.youtube.com/watch?v=kPR45XVKryc" target="blank" class="btn btn-primary">Website</a>
+                <a href="https://www.youtube.com/watch?v=kPR45XVKryc" target="_blank" class="btn btn-primary">Website</a>
               </div>
             </div>
           </div>
@@ -323,18 +314,31 @@
           <div class="col-sm-2"></div>
           <div class="col-sm-8">
             <div id="contact-me">
-              <form>
+              <div class="dv-notify-success">
+                <div class="alert alert-success alert-dismissable">
+                  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                  <strong>Message Sent Successfully</strong>
+                </div>
+                <div class="dv-notify-failed">
+                  <div class="alert alert-success alert-dismissable">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                    <strong>Message not sent, please try again</strong>
+                  </div>
+                </div>
+              </div>
+              <form class="dv-add-oneto:ContactForm:contacts">
                 <div class="form-group">
                   <label for="contact-name">Name</label>
-                  <input type="text" class="form-control" id="contact-name" placeholder="Jon Snow">
+                  <input type="text" class="form-control" id="contact-name" placeholder="Jon Snow" name="name" required>
                 </div>
                 <div class="form-group">
-                  <label for="contact-name">Email</label>
-                  <input type="email" class="form-control" id="contact-email" placeholder="jon@snow.com">
+                  <label for="contact-email">Email</label>
+                  <input type="email" class="form-control" id="contact-email" placeholder="jon@snow.com" name="email" required>
                 </div>
                 <div class="form-group">
-                  <label for="contact-name">Message</label>
-                  <textarea type="textarea" class="form-control" rows="5" id="contact-message" placeholder="Enter message here..."></textarea>
+                  <label for="contact-message">Message</label>
+                  <textarea type="textarea" class="form-control" rows="5" id="contact-message" placeholder="Enter message here..." name="message"
+                    required></textarea>
                 </div>
                 <div class="form-group">
                   <button type="submit" class="form-control btn btn-primary">Send</button>
@@ -372,7 +376,7 @@
         <div class="col-sm">
           <p style="padding: 20px;">
             <span class="fa fa-copyright"></span> Copyright 2018</p>
-          <p>
+          <p class="count-down">
             <span id="days"></span>
             <span id="hours"></span>
             <span id="minutes"></span>
@@ -382,19 +386,19 @@
         <div class="col-sm">
           <ul id="social-list" class="nav flex-sm-row justify-content-end">
             <li class="list-item">
-              <a href="https://www.facebook.com/rodgers.ouma.3" target="blank" class="fa fa-facebook"></a>
+              <a href="https://www.facebook.com/rodgers.ouma.3" target="_blank" class="fa fa-facebook"></a>
             </li>
             <li class="list-item">
-              <a href="https://twitter.com/mc_alila" target="blank" class="fa fa-twitter"></a>
+              <a href="https://twitter.com/mc_alila" target="_blank" class="fa fa-twitter"></a>
             </li>
             <li class="list-item">
-              <a href="https://www.linkedin.com/in/rodgers-ouma/" target="blank" class="fa fa-linkedin"></a>
+              <a href="https://www.linkedin.com/in/rodgers-ouma/" target="_blank" class="fa fa-linkedin"></a>
             </li>
             <li class="list-item">
-              <a href="https://github.com/ardenn" target="blank" class="fa fa-github"></a>
+              <a href="https://github.com/ardenn" target="_blank" class="fa fa-github"></a>
             </li>
             <li class="list-item">
-              <a href="https://www.instagram.com/mc_alila/" target="blank" class="fa fa-instagram"></a>
+              <a href="https://www.instagram.com/mc_alila/" target="_blank" class="fa fa-instagram"></a>
             </li>
           </ul>
         </div>
@@ -416,6 +420,7 @@
     crossorigin="anonymous"></script>
   <script src="js/website.js"></script>
   <script src="js/moment.js"></script>
+  <script src="http://ardenn.herokuapp.com/js/devless-sdk.js" class="devless-connection" devless-con-token="294c110404b688b8f09c0b38b2757be3"></script>
 </body>
 
 </html>
