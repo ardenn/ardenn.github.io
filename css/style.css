@@ -197,3 +197,6 @@ main #content {
     background-color: #007bFF;
     color: #ffffff; 
 }
+.col-sm {
+    padding: 15px!important;
+}
