@@ -15,7 +15,7 @@ body {
     font-size: 50px;
 }
 .description {
-    padding: 10px 0px 10px 0px;
+    padding: 10px 10px;
     font-size: 20px;
 }
 .page-section {
@@ -162,6 +162,14 @@ main #content {
     color: #03C03C;
     
 }
+.marker {
+    color: #007bFF;
+    font-size: 20px;
+    padding-right: 5px;
+    font-weight: bolder;
+    border-width: 2px;
+}
+
 .btn-primary:hover{
     color: #ffffff;
     background-color: #03C03C;
