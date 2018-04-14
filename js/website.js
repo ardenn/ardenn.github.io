@@ -1,16 +1,16 @@
 function keepScrollingDown(to, speed) {
-    if (window.scrollY < to) {
+    if (window.scrollY < to - 20) {
         setTimeout(() => {
-            window.scrollBy(0, 20)
+            window.scrollBy(0, 30)
             keepScrollingDown(to, speed)
         }, speed)
     }
 }
 
 function keepScrollingUp(to, speed) {
-    if (window.scrollY > to) {
+    if (window.scrollY > to + 10) {
         setTimeout(() => {
-            window.scrollBy(0, -20)
+            window.scrollBy(0, -30)
             keepScrollingUp(to, speed)
         }, speed)
     }
@@ -24,9 +24,9 @@ function slowScroll(item) {
     let reverse = (targetPosition - currentPosition) < 0 ? true : false
 
     if (reverse) {
-        keepScrollingUp(targetPosition, 5)
+        keepScrollingUp(targetPosition, 1)
     } else {
-        keepScrollingDown(targetPosition, 5)
+        keepScrollingDown(targetPosition, 1)
     }
 };
 
@@ -38,4 +38,16 @@ window.onscroll = () => {
         document.getElementById("top-scroll").style.display = "none";
     }
 }
-upScroll = () => keepScrollingUp(0, .1)
+upScroll = () => keepScrollingUp(0, 1)
+
+$("#contact").submit(function (e) {
+    e.preventDefault();
+
+    var $form = $(this);
+    $.post(
+        $form.attr("action"),
+        $form.serialize()
+    ).then(function () {
+        alert("Thank you!");
+    });
+});
