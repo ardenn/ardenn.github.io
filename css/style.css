@@ -84,13 +84,16 @@ kbd {
 .bars {
     padding: 0px 20px 50px 20px;
 }
-.q-title {
+.q-title, .e-title {
     font-weight: bold;
     font-size: 25px;
-    padding: 20px 5px 20px 5px;
+    padding: 0px 5px 20px 0px;
 }
-.q-subtitle {
+.q-subtitle, .e-subtitle {
     font-size: 20px;
+}
+.e-location {
+    font-size: 18px;
 }
 .q-date {
     font-size: 20px;
@@ -112,7 +115,7 @@ kbd {
     border-radius: 10px;
 }
 .form-control {
-    padding: 20px 10px 20px 10px;
+    padding: 10px;
     border-radius: 10px;
     font-family: Nunito;
 }
@@ -126,7 +129,7 @@ kbd {
 }
 #social-list li {
     list-style: none;
-    padding: 20px;
+    padding: 10px;
 }
 #social-list li a {
     color: unset;
@@ -200,6 +203,17 @@ main #content {
     background-color: #03C03C;
     color: #ffffff;
     /* transition: all 0.5s ease-in; */
+}
+#left-links {
+    display:block;
+    left: 20px;
+    position: fixed;
+    bottom: auto;
+    top:auto;
+    z-index: 100;
+    padding: 16px 20px 16px 20px;
+    background-color: #03C03C;
+    color: #ffffff;
 }
 #top-scroll:hover{
     background-color: #007bFF;
