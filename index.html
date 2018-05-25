@@ -336,7 +336,7 @@
           <div class="col-sm-2"></div>
           <div class="col-sm-8">
             <div id="contact-me">
-              <form id="netlify-form" name="contact" method="POST" netlify netlify-honeypot="bot-field">
+              <form id="my-form" name="contact" method="POST" netlify netlify-honeypot="bot-field">
                 <p hidden>
                   <label>Don’t fill this out if you're human:
                     <input name="bot-field" />
@@ -358,6 +358,9 @@
                 <div class="form-group">
                   <button type="submit" class="form-control btn btn-primary">Send</button>
                 </div>
+                <p id="form-success" class="alert alert-success" hidden>
+                  Thank you, I will be in touch.
+                </p>
               </form>
             </div>
           </div>
@@ -434,12 +437,13 @@
     crossorigin="anonymous"></script>
   <script src="js/website.js"></script>
   <script>
-    $("#netlify-form").submit(function (e) {
+    $("#my-form").submit(function (e) {
       e.preventDefault();
 
       var $form = $(this);
       $.post($form.attr("action"), $form.serialize()).then(function () {
-        alert("Thank you!");
+        $("#form-success").show();
+        setTimeout(function () { $("#form-success").hide(); }, 5000);
       });
     });
   </script>
