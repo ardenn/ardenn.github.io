@@ -111,8 +111,10 @@ kbd {
 #contact-me {
     background-color: #F2F2F2; 
     padding: 40px;
-    font-weight: bold;
     border-radius: 10px;
+}
+label{
+    font-weight: bold;
 }
 .form-control {
     padding: 10px;
