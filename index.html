@@ -448,7 +448,7 @@
         .then(function () {
           $("#form-success").show();
           setTimeout(function () { $("#form-success").hide(); }, 5000);
-          $("#form-success").trigger("reset");
+          $("#my-form").trigger("reset");
         })
         .catch(function () {
           $("#form-failure").show();
