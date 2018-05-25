@@ -361,6 +361,9 @@
                 <p id="form-success" class="alert alert-success" style="display: none">
                   Thank you, I will be in touch.
                 </p>
+                <p id="form-failure" class="alert alert-danger" style="display: none">
+                  Sorry, Please try again.
+                </p>
               </form>
             </div>
           </div>
@@ -441,10 +444,16 @@
       e.preventDefault();
 
       var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function () {
-        $("#form-success").show();
-        setTimeout(function () { $("#form-success").hide(); }, 5000);
-      });
+      $.post($form.attr("action"), $form.serialize())
+        .then(function () {
+          $("#form-success").show();
+          setTimeout(function () { $("#form-success").hide(); }, 5000);
+          $("#form-success").trigger("reset");
+        })
+        .catch(function () {
+          $("#form-failure").show();
+          setTimeout(function () { $("#form-failure").hide(); }, 5000);
+        });
     });
   </script>
 </body>
