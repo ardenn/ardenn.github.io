@@ -16,7 +16,6 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="fonts/material-design-icons/css/materialdesignicons.min.css" />
 	<link rel="stylesheet" href="css/owl.carousel.css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" />
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css" />
 
@@ -28,491 +27,56 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113569257-2"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-113569257-2');
+		if (location.host === "rodgersouma.com") {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'UA-113569257-2');
+		}
 	</script>
 
 </head>
 
 <body>
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
-
-	<!-- Header section start -->
-	<header class="header-section">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-4">
-					<div class="site-logo">
-						<img src="img/logo.png" alt="logo" height="40">
-					</div>
-				</div>
-				<div class="col-8">
-					<a href="https://www.dropbox.com/s/wywi63fyzcqamjt/RodgersOuma.pdf?dl=1" download class="site-btn">Download CV</a>
-				</div>
+	<section class="container card" id="intro">
+		<nav class="top-nav px-5">
+			<div class="brand">Ouma Rodgers</div>
+			<div class="nav-actions">
+				<span class="has-cursor">
+					<span class="mdi mdi-menu"></span>
+				</span>
 			</div>
-		</div>
-	</header>
-	<!-- Header section end -->
-
-	<!-- Hero section start -->
-	<section class="hero-section spad-bottom">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-10 offset-xl-1">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="hero-text">
-								<h2>Ouma Rodgers</h2>
-								<p>I’m a software developer, data enthusiast and an entrepreneur.</p>
-							</div>
-							<div class="hero-info">
-								<h2>General Info</h2>
-								<ul>
-									<li>
-										<span>Date of Birth</span>Dec 27</li>
-									<li>
-										<span>Location</span>Homa Bay, Homa Bay, Kenya</li>
-									<li>
-										<span>E-mail</span>
-										<a href="mailto:hello@rodgersouma.com">[ hello@rodgersouma.com ]</a>
-									</li>
-									<li>
-										<span>Phone </span>
-										<span>
-											<a href="https://api.whatsapp.com/send?phone=254700035576&text=Hi%20Rodgers,%20Found%20you%20from%20your%20website">
-												<i class="mdi mdi-whatsapp"></i>
-											</a>
-											<a href="https://t.me/mc_alila">
-												<i class="mdi mdi-telegram"></i>
-											</a>
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<figure class="hero-image">
-								<img src="img/hero.jpg" alt="5">
-							</figure>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		</nav>
 	</section>
-	<!-- Hero section end -->
-
-	<!-- Social links section start -->
-	<div class="social-section">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-6 offset-xl-3">
-					<div class="social-link-warp">
-						<div class="social-links mx-auto">
-							<a href="https://github.com/ardenn" target="_blank">
-								<i class="mdi mdi-github-circle"></i>
-							</a>
-							<a href="https://www.linkedin.com/in/rodgers-ouma/" target="_blank">
-								<i class="mdi mdi-linkedin"></i>
-							</a>
-							<a href="https://www.instagram.com/mc_alila/" target="_blank">
-								<i class="mdi mdi-instagram"></i>
-							</a>
-							<a href="https://www.facebook.com/rodgers.ouma.3" target="_blank">
-								<i class="mdi mdi-facebook"></i>
-							</a>
-							<a href="https://twitter.com/mc_alila" target="_blank">
-								<i class="mdi mdi-twitter"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+	<div id="minimenu" class="card">
+		<div class="mininav pb-4">
+			<div class="brand">Ouma Rodgers</div>
+			<span class="mdi mdi-close"></span>
+		</div>
+		<ul class="list-no-style pl-2 pb-4">
+			<li>Home</li>
+			<li>About</li>
+			<li>Case Studies</li>
+			<li>Contact</li>
+		</ul>
+		<div>
+			<a href="">
+				<span class="mdi mdi-github"></span>
+			</a>
+			<a href="">
+				<span class="mdi mdi-linkedin"></span>
+			</a>
+			<a href="">
+				<span class="mdi mdi-facebook"></span>
+			</a>
+			<a href="">
+				<span class="mdi mdi-twitter"></span>
+			</a>
 		</div>
 	</div>
-	<!-- Social links section end -->
-
-	<!-- Resume section start -->
-	<section class="resume-section spad">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-7 offset-xl-2">
-					<div class="section-title">
-						<h2>Work Experience</h2>
-					</div>
-					<ul class="resume-list">
-						<li>
-							<h2>Apr 2018-Present</h2>
-							<h3>Qalisi</h3>
-							<h4>Chief Technology Officer</h4>
-							<p>Qalisi - Aptly described as Africa's largest community of theatrical talent and creative performers, is a startup
-								in Accra, Ghana. The company provides talented individuals with a platform to maintain their portfolio and get exposure
-								to film producers from all over Africa. The platform also provides a video-based casting tool for producers to collaboratively
-								recruit talent at their own convenience.</p>
-						</li>
-						<li>
-							<h2>Aug 2017-Present</h2>
-							<h3>Meltwater Entrepreneurial School of Technology</h3>
-							<h4>Entrepreneur in Training</h4>
-							<p>MEST is a non-profit arm of the global media monitoring and analytics giant - Meltwater Group. Every year MEST brings
-								together top participants from 6 countries across Africa to their campus located in Accra,Ghana for an intensive
-								12-month program.During this period, the Entrepreneurs-in-Training(EiTs), get to learn about Software Development,
-								Business and Communication from world-class fellows. At the end, the goal is for the EiTs to establish successful
-								software startups, with an initial seed funding from MEST. This initiative has since invested in 25+ companies across
-								Africa.
-							</p>
-						</li>
-						<li>
-							<h2>May 2017- August 2017</h2>
-							<h3>Commercial Bank of Africa</h3>
-							<h4>Operations Assistant</h4>
-							<p>CBA is one of the leading top-tier banks in Kenya, with offices in 4 african countries. With 60+ yeas of operation
-								behind it, the bank prides itself in providing customers with exceptional financial services that enable them to
-								save, invest and grow their wealth. By offering services that are simple and effective the bank strives to give clients
-								time for more.</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Resume section end -->
-
-	<!-- Resume section start -->
-	<section class="resume-section with-bg spad">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-7 offset-xl-2">
-					<div class="section-title">
-						<h2>Education</h2>
-					</div>
-					<ul class="resume-list">
-						<li>
-							<h2>2018</h2>
-							<h3>Software Entrepreneurship</h3>
-							<h4>MEST</h4>
-							<p>Graduated from MEST after successfully undergoing an intense 1-year course covering software engineering, business,
-								communication and entrepreneurship.</p>
-						</li>
-						<li>
-							<h2>2016</h2>
-							<h3>BSc Actuarial Science</h3>
-							<h4>Jomo Kenyatta University of Agriculture and Technology</h4>
-							<p>Graduated from JKUAT with a Second Class(Upper Division) degree in Actuarial science after undergoing the 4-year course.</p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Resume section end -->
-
-
-	<!-- Review section start -->
-	<section class="review-section spad pb-0">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-7 offset-xl-2">
-					<div class="section-title">
-						<h2>References</h2>
-					</div>
-					<div class="review-slider owl-carousel">
-						<div class="single-review">
-							<div class="qut">“</div>
-							<p>You can not talk about Rodgers without mentioning his grit and hard work. Rodgers is extremely talented in business
-								and tech. He combines his technical and business expertise to ensure business goals are met. I have seen him work
-								long days and nights to get projects delivered on time. He is very dedicated to everything he puts his hands on.
-								He is also that person in a team who suggests a way of looking at the idea that completely blows you away. Rodgers
-								is a great addition to any team or organization that he works in.</p>
-							<h3>Derrick Mwiti</h3>
-							<h4>CPO, Qalisi</h4>
-						</div>
-						<div class="single-review">
-							<div class="qut">“</div>
-							<p>You can not talk about Rodgers without mentioning his grit and hard work. Rodgers is extremely talented in business
-								and tech. He combines his technical and business expertise to ensure business goals are met. I have seen him work
-								long days and nights to get projects delivered on time. He is very dedicated to everything he puts his hands on.
-								He is also that person in a team who suggests a way of looking at the idea that completely blows you away. Rodgers
-								is a great addition to any team or organization that he works in.</p>
-							<h3>Derrick Mwiti</h3>
-							<h4>CPO, Qalisi</h4>
-						</div>
-						<div class="single-review">
-							<div class="qut">“</div>
-							<p>You can not talk about Rodgers without mentioning his grit and hard work. Rodgers is extremely talented in business
-								and tech. He combines his technical and business expertise to ensure business goals are met. I have seen him work
-								long days and nights to get projects delivered on time. He is very dedicated to everything he puts his hands on.
-								He is also that person in a team who suggests a way of looking at the idea that completely blows you away. Rodgers
-								is a great addition to any team or organization that he works in.</p>
-							<h3>Derrick Mwiti</h3>
-							<h4>CPO, Qalisi</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Review section end -->
-
-
-	<!-- Portfolio section start -->
-	<section class="portfolio-section spad pb-0">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-4 col-md-8 offset-xl-2 ">
-					<div class="section-title">
-						<h2>Portfolio</h2>
-					</div>
-				</div>
-			</div>
-			<div class="portfolio-warp">
-				<div class="row">
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<div class="portfolio-item">
-							<a href="img/portfolio/1.jpg" class="set-bg port-pic" data-setbg="img/portfolio/1.jpg"></a>
-							<h2>
-								<a href="https://www.qalisi.com">Qalisi</a>
-							</h2>
-							<p>Web development</p>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<div class="portfolio-item">
-							<a href="img/portfolio/1.jpg" class="set-bg port-pic" data-setbg="img/portfolio/1.jpg"></a>
-							<h2>
-								<a href="https://www.qalisi.com">Qalisi</a>
-							</h2>
-							<p>Business Strategy</p>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<div class="portfolio-item">
-							<a href="img/portfolio/2.png" class="set-bg port-pic" data-setbg="img/portfolio/2.png"></a>
-							<h2>
-								<a href="https://www.qalisi.com">Qalisi</a>
-							</h2>
-							<p>Branding and Identity</p>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<div class="portfolio-item">
-							<a href="img/portfolio/1.jpg" class="set-bg port-pic" data-setbg="img/portfolio/1.jpg"></a>
-							<h2>
-								<a href="https://www.qalisi.com">Qalisi</a>
-							</h2>
-							<p>Product Development</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Portfolio section end -->
-
-	<!-- Extra section start -->
-	<section class="extra-section spad pb-0">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-10 offset-xl-1">
-					<div class="section-title">
-						<h2>Extra Skills</h2>
-					</div>
-					<div class="row">
-						<div class="col-lg-3 col-md-6 pt-5">
-							<div class="fact-box trans">
-								<div class="fact-content">
-									<div class="circle-progress">
-										<div id="progress1" class="prog-circle"></div>
-										<div class="progress-info">
-											<h2>75%</h2>
-										</div>
-										<div class="prog-title">
-											<h3>Python</h3>
-											<p>Scripting and Web development</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 pt-5">
-							<div class="fact-box trans">
-								<div class="fact-content">
-									<div class="circle-progress">
-										<div id="progress2" class="prog-circle"></div>
-										<div class="progress-info">
-											<h2>83%</h2>
-										</div>
-										<div class="prog-title">
-											<h3>Django & Flask</h3>
-											<p>Server side web development</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 pt-5">
-							<div class="fact-box trans">
-								<div class="fact-content">
-									<div class="circle-progress">
-										<div id="progress3" class="prog-circle"></div>
-										<div class="progress-info">
-											<h2>73%</h2>
-										</div>
-										<div class="prog-title">
-											<h3>Angular</h3>
-											<p>Client side web development</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 pt-5">
-							<div class="fact-box trans">
-								<div class="fact-content">
-									<div class="circle-progress">
-										<div id="progress4" class="prog-circle"></div>
-										<div class="progress-info">
-											<h2>78%</h2>
-										</div>
-										<div class="prog-title">
-											<h3>Exploratory Data Analysis</h3>
-											<p>pandas, matplotlib, seaborn</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 pt-5">
-							<div class="fact-box trans">
-								<div class="fact-content">
-									<div class="circle-progress">
-										<div id="progress5" class="prog-circle"></div>
-										<div class="progress-info">
-											<h2>49%</h2>
-										</div>
-										<div class="prog-title">
-											<h3>Machine Learning</h3>
-											<p>ML with python - scikit-learn,nltk</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 pt-5">
-							<div class="fact-box trans">
-								<div class="fact-content">
-									<div class="circle-progress">
-										<div id="progress6" class="prog-circle"></div>
-										<div class="progress-info">
-											<h2>83%</h2>
-										</div>
-										<div class="prog-title">
-											<h3>HTML, CSS & JS</h3>
-											<p>ML with python - scikit-learn,nltk</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 pt-5">
-							<div class="fact-box trans">
-								<div class="fact-content">
-									<div class="circle-progress">
-										<div id="progress7" class="prog-circle"></div>
-										<div class="progress-info">
-											<h2>71%</h2>
-										</div>
-										<div class="prog-title">
-											<h3>Linux System Admin</h3>
-											<p>ubuntu,debian,linux-mint</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 pt-5">
-							<div class="fact-box trans">
-								<div class="fact-content">
-									<div class="circle-progress">
-										<div id="progress8" class="prog-circle"></div>
-										<div class="progress-info">
-											<h2>67%</h2>
-										</div>
-										<div class="prog-title">
-											<h3>Business Strategy</h3>
-											<p>strategy,growth,marketing,research</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Extra section end -->
-
-	<!-- Contact section start -->
-	<section class="contact-section spad">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-8 offset-xl-2">
-					<div class="section-title">
-						<h2>Contact Me</h2>
-					</div>
-					<form class="contact-form" id="my-form" name="contact" method="POST" netlify netlify-honeypot="bot-field">
-						<p hidden>
-							<label>Don’t fill this out if you're human:
-								<input name="bot-field" />
-							</label>
-						</p>
-						<div class="row">
-							<div class="col-md-6">
-								<input type="text" placeholder="Name" name="name">
-							</div>
-							<div class="col-md-6">
-								<input type="text" placeholder="E-mail" name="email">
-							</div>
-							<div class="col-md-12">
-								<textarea placeholder="Message" name="message"></textarea>
-							</div>
-						</div>
-						<div class="text-md-right">
-							<button class="site-btn">Send message</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Contact section end -->
-
-	<!-- Footer section start -->
-	<footer class="footer-section">
-		<div class="container text-center">
-			<div class="copyright">
-				Copyright &copy;
-				<script>document.write(new Date().getFullYear());</script> | Ouma Rodgers
-			</div>
-		</div>
-	</footer>
-	<!-- Footer section end -->
-
-
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/magnific-popup.min.js"></script>
-	<script src="js/circle-progress.min.js"></script>
-	<script src="js/main.js"></script>
 </body>
 
 </html>
