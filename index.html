@@ -39,10 +39,10 @@
 
 <body>
 	<section class="container card" id="intro">
-		<nav class="top-nav px-5">
+		<nav class="top-nav">
 			<div class="brand">Ouma Rodgers</div>
 			<div class="nav-actions">
-				<span class="has-cursor">
+				<span class="has-cursor" id="toggler" onclick="toggleMiniBar()">
 					<span class="mdi mdi-menu"></span>
 				</span>
 			</div>
@@ -51,7 +51,7 @@
 	<div id="minimenu" class="card">
 		<div class="mininav pb-4">
 			<div class="brand">Ouma Rodgers</div>
-			<span class="mdi mdi-close"></span>
+			<span class="mdi mdi-close" onclick="closeMiniBar()"></span>
 		</div>
 		<ul class="list-no-style pl-2 pb-4">
 			<li>Home</li>
@@ -59,9 +59,9 @@
 			<li>Case Studies</li>
 			<li>Contact</li>
 		</ul>
-		<div>
+		<div class="social-links">
 			<a href="">
-				<span class="mdi mdi-github"></span>
+				<span class="mdi mdi-github-circle"></span>
 			</a>
 			<a href="">
 				<span class="mdi mdi-linkedin"></span>
@@ -77,6 +77,7 @@
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
