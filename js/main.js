@@ -29,18 +29,18 @@ $("#my-form").submit(function (e) {
 });
 
 function keepScrollingDown(to, speed) {
-    if (window.scrollY < to - 20) {
+    if (window.scrollY < to) {
         setTimeout(() => {
-            window.scrollBy(0, 30)
+            window.scrollBy(0, 20)
             keepScrollingDown(to, speed)
         }, speed)
     }
 }
 
 function keepScrollingUp(to, speed) {
-    if (window.scrollY > to + 10) {
+    if (window.scrollY > to) {
         setTimeout(() => {
-            window.scrollBy(0, -30)
+            window.scrollBy(0, -20)
             keepScrollingUp(to, speed)
         }, speed)
     }
@@ -54,9 +54,9 @@ function slowScroll(item) {
     let reverse = (targetPosition - currentPosition) < 0 ? true : false
 
     if (reverse) {
-        keepScrollingUp(targetPosition, 1)
+        keepScrollingUp(targetPosition, 5)
     } else {
-        keepScrollingDown(targetPosition, 1)
+        keepScrollingDown(targetPosition, 5)
     }
 };
 

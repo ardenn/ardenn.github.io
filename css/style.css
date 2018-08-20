@@ -159,10 +159,10 @@ label{
 		font-size: 2rem;
 		height: 3rem;
 		width: 3rem;
-    right: 3rem;
+    right: 2rem;
 		bottom: 3rem;
 		border-radius: 50%;
-    z-index: 100000;
+    z-index: 100;
     position: fixed;
     background-color: #FF5722;
     color: #FFFFFF;
