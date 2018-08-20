@@ -299,6 +299,26 @@
 				</a>
 			</div>
 		</div>
+		<button class="btn rounded-circle" id="top-scroll" onclick="upScroll()">
+			<i class="fa fa-chevron-up"></i>
+		</button>
+		<script>
+			$("#my-form").submit(function (e) {
+				e.preventDefault();
+
+				var $form = $(this);
+				$.post($form.attr("action"), $form.serialize())
+					.then(function () {
+						$("#form-success").show();
+						setTimeout(function () { $("#form-success").hide(); }, 5000);
+						$("#my-form").trigger("reset");
+					})
+					.catch(function () {
+						$("#form-failure").show();
+						setTimeout(function () { $("#form-failure").hide(); }, 5000);
+					});
+			});
+		</script>
 		<!--====== Javascripts & Jquery ======-->
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
