@@ -26,7 +26,7 @@ body {
 	font-family: 'Nunito', sans-serif;
 }
 .backthemed {
-	background: linear-gradient(to right,#FCD19A,#FF5722);
+	background: linear-gradient(to right,#00B953,#B3FFD5,#00B953);
 	padding: 4rem 0;
 	height: 100%;
 }
@@ -47,8 +47,10 @@ section#intro .card{
 }
 .brand {
 	font-weight: 800;
-	border-bottom: solid .25rem #FF5722;
 	margin-bottom: 1rem;
+}
+.bottomed {
+	border-bottom: solid .25rem #FF5722;
 }
 nav.top-nav {
 	display: flex;
@@ -96,9 +98,18 @@ div#minimenu.show {
 	font-weight: 600;
 	font-size: 1.4rem;
 }
-.tech-stack {
+.tech-stack,.portfolio,.education {
 	font-size: 1.1rem;
 }
 .subtitle {
 	font-weight: 700;
+}
+.mdi {
+	color: #FF5722;
+}
+.text-accent {
+	color: #FF5722;
+}
+.font-bold {
+	font-weight: 800;
 }
