@@ -188,6 +188,72 @@
 						</div>
 					</nav>
 					<div class="mt-3">
+						<div class="row">
+							<div class="col-sm-2"></div>
+							<div class="col-sm-8">
+								<div id="contact-me">
+									<form id="my-form" name="contact" method="POST" netlify netlify-honeypot="bot-field">
+										<p hidden>
+											<label>Don’t fill this out if you're human:
+												<input name="bot-field" />
+											</label>
+										</p>
+										<div class="form-group">
+											<label for="contact-name">Name</label>
+											<input type="text" class="form-control" id="contact-name" placeholder="Jon Snow" name="name" required>
+										</div>
+										<div class="form-group">
+											<label for="contact-email">Email</label>
+											<input type="email" class="form-control" id="contact-email" placeholder="jon@snow.com" name="email" required>
+										</div>
+										<div class="form-group">
+											<label for="contact-message">Message</label>
+											<textarea type="textarea" class="form-control" rows="3" id="contact-message" placeholder="Enter message here..." name="message"
+											 required></textarea>
+										</div>
+										<div class="form-group">
+											<button type="submit" class="form-control btn btn-primary">Send</button>
+										</div>
+										<p id="form-success" class="alert alert-success" style="display: none">
+											Thank you, I will be in touch.
+										</p>
+										<p id="form-failure" class="alert alert-danger" style="display: none">
+											Sorry, Please try again.
+										</p>
+									</form>
+								</div>
+							</div>
+							<div class="col-sm-2"></div>
+						</div>
+						<div class="row contact-details">
+							<div class="col-sm text-center">
+								<p class="contact-h">
+									<span class="lnr lnr-home"></span> Address</p>
+								<p>Accra | Ghana</p>
+								<p>Nairobi | Kenya</p>
+							</div>
+							<div class="col-sm text-center">
+								<p class="contact-h">Lets Chat</p>
+								<p>
+									<a href="https://api.whatsapp.com/send?phone=254700035576&text=Hi%20Rodgers,%20Found%20you%20from%20your%20website">
+										<span class="fa fa-whatsapp"></span> WhatsApp</a>
+								</p>
+								<p>
+									<a href="https://t.me/mc_alila">
+										<span class="fa fa-telegram"></span> Telegram</a>
+								</p>
+							</div>
+							<div class="col-sm text-center">
+								<p class="contact-h">
+									<span class="lnr lnr-envelope"></span> Email</p>
+								<p>
+									<a href="mailto:rodgers.ouma@meltwater.org">rodgers.ouma@meltwater.org</a>
+								</p>
+								<p>
+									<a href="mailto:hello@rodgersouma.com">hello@rodgersouma.com</a>
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
