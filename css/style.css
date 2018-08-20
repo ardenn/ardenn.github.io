@@ -124,16 +124,14 @@ div#minimenu.show {
 	font-weight: 800;
 }
 #contact-me {
-    background-color: #F2F2F2; 
-    padding: 40px;
-    border-radius: 0.8rem;
+    padding: 3rem;
+    border-radius: 0.2rem;
 }
 label{
     font-weight: bold;
 }
 .form-control {
     padding: 0.8rem;
-    border-radius: 0.8rem;
 		color: unset;
 }
 .contact-details {
