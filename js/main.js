@@ -4,8 +4,10 @@ function toggleMiniBar() {
         miniMenu.classList.remove("show");
     } else {
         miniMenu.classList.add("show");
+        miniMenu.classList.add("slideInDown");
     }
 }
 function closeMiniBar() {
     miniMenu.classList.remove("show");
+    miniMenu.classList.remove("slideInDown");
 }
