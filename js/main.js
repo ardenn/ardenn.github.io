@@ -12,6 +12,22 @@ function closeMiniBar() {
     miniMenu.classList.remove("slideInDown");
 }
 
+$("#my-form").submit(function (e) {
+    e.preventDefault();
+
+    var $form = $(this);
+    $.post($form.attr("action"), $form.serialize())
+        .then(function () {
+            $("#form-success").show();
+            setTimeout(function () { $("#form-success").hide(); }, 5000);
+            $("#my-form").trigger("reset");
+        })
+        .catch(function () {
+            $("#form-failure").show();
+            setTimeout(function () { $("#form-failure").hide(); }, 5000);
+        });
+});
+
 function keepScrollingDown(to, speed) {
     if (window.scrollY < to - 20) {
         setTimeout(() => {
@@ -44,12 +60,12 @@ function slowScroll(item) {
     }
 };
 
-
+const topScroll = document.getElementById("top-scroll");
 window.onscroll = () => {
     if (window.scrollY >= 600) {
-        document.getElementById("top-scroll").style.display = "block";
+        topScroll.style.display = "flex";
     } else {
-        document.getElementById("top-scroll").style.display = "none";
+        topScroll.style.display = "none";
     }
 }
 upScroll = () => keepScrollingUp(0, 1)
