@@ -21,11 +21,14 @@ html {
   } */
 html {
 	height: 100%;
-	background: linear-gradient(to bottom right,#FCD19A,#FF5722);
 }
 body {
-	height: 100%;
 	font-family: 'Nunito', sans-serif;
+}
+.backthemed {
+	background: linear-gradient(to right,#FCD19A,#FF5722);
+	padding: 4rem 0;
+	height: 100%;
 }
 a {
 	color: unset;
@@ -34,11 +37,12 @@ a:hover{
 	color: unset;
 	text-decoration: unset;
 }
-section#intro {
+section#intro .card{
+	background-image: url(../img/resume-bg.jpg);
+}
+.theme-card{
 	border-radius: .8rem;
 	padding: 2rem;
-	margin-top: 4rem;
-	background-image: url(../img/resume-bg.jpg);
 	background-size: cover;
 }
 .brand {
@@ -57,7 +61,7 @@ div#minimenu {
 	min-width: 12rem;
 	padding: 1rem;
 	border-radius: .8rem;
-	position: absolute;
+	position: fixed;
 	display: none;
 	right: 3rem;
 	top: 8rem;
@@ -75,9 +79,6 @@ div#minimenu.show {
 }
 .list-no-style li {
 	padding-bottom: .6rem;
-}
-div#introbody h1{
-	line-height: 1.5;
 }
 .intro-title {
 	padding: 8rem 2rem;
