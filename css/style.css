@@ -1,24 +1,48 @@
 @import url('../fonts/font-face.css');
 html {
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
-/* @include media-breakpoint-up(sm) {
-  html {
-    font-size: .6rem;
-  }
-}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+		html {
+			font-size: .8rem;
+		}
+		.intro-title {
+			font-size: 1.2rem;
+		}
+ }
 
-@include media-breakpoint-up(md) {
-  html {
-    font-size: .8rem;
-  }
-}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	html {
+			font-size: .9rem;
+		}
+		.intro-title {
+			font-size: 1.4rem;
+		}
+ }
 
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1rem;
-  } */
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	html {
+			font-size: 1rem;
+		}
+		.intro-title {
+			font-size: 1.6rem;
+		}
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	html {
+			font-size: 1.2rem;
+		}
+		.intro-title {
+			font-size: 1.8rem;
+		}
+ }
+
 html {
 	height: 100%;
 }
@@ -69,7 +93,6 @@ div#minimenu {
 	padding: 1rem;
 	border-radius: .8rem;
 	position: fixed;
-	font-size: 1.2rem;
 	display: none;
 	right: 3rem;
 	top: 8rem;
@@ -96,9 +119,9 @@ div#minimenu.show {
 	padding-bottom: .6rem;
 }
 .intro-title {
-	padding: 8rem 2rem;
+	padding: 5rem 2rem;
 	font-weight: 800;
-	font-size: 2.55rem;
+	font-size: 2rem;
 	line-height: 1.45;
 }
 #toggler {
@@ -109,7 +132,6 @@ div#minimenu.show {
 	font-size: 1.4rem;
 }
 .tech-stack,.portfolio,.education {
-	font-size: 1.1rem;
 }
 .subtitle {
 	font-weight: 700;
@@ -137,7 +159,6 @@ label{
 .contact-details {
     padding-top: 4rem;
 		padding-bottom: 2rem;
-		font-size: 1.1rem;
 }
 .contact-h {
     font-weight: bold;
@@ -167,4 +188,7 @@ label{
 }
 #top-scroll .mdi {
 	color: #FFFFFF;
+}
+footer {
+	font-size: 1rem;
 }
