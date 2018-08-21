@@ -302,8 +302,26 @@
 		<span id="top-scroll" onclick="upScroll()" class="has-cursor">
 			<i class="mdi mdi-chevron-up"></i>
 		</span>
-		<!--====== Javascripts & Jquery ======-->
-		<script src="js/jquery-2.1.4.min.js"></script>
+		<!--====== Javascript & Jquery ======-->
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$("#my-form").submit(function (e) {
+				e.preventDefault();
+
+				var $form = $(this);
+				$.post($form.attr("action"), $form.serialize())
+					.then(function () {
+						$("#form-success").show();
+						setTimeout(function () { $("#form-success").hide(); }, 5000);
+						$("#my-form").trigger("reset");
+					})
+					.catch(function () {
+						$("#form-failure").show();
+						setTimeout(function () { $("#form-failure").hide(); }, 5000);
+					});
+			});
+
+		</script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>

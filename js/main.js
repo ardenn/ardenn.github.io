@@ -12,22 +12,6 @@ function closeMiniBar() {
     miniMenu.classList.remove("slideInDown");
 }
 
-$("#my-form").submit(function (e) {
-    e.preventDefault();
-
-    var $form = $(this);
-    $.post($form.attr("action"), $form.serialize())
-        .then(function () {
-            $("#form-success").show();
-            setTimeout(function () { $("#form-success").hide(); }, 5000);
-            $("#my-form").trigger("reset");
-        })
-        .catch(function () {
-            $("#form-failure").show();
-            setTimeout(function () { $("#form-failure").hide(); }, 5000);
-        });
-});
-
 function keepScrollingDown(to, speed) {
     if (window.scrollY < to) {
         setTimeout(() => {
