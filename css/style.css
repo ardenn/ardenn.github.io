@@ -99,7 +99,7 @@ div#minimenu {
 	position: fixed;
 	display: none;
 	right: 3rem;
-	top: 8rem;
+	top: 4rem;
 	background-color: rgba(245, 246, 247, 0.9);
 }
 div#minimenu.show {
