@@ -47,10 +47,10 @@ html {
 	height: 100%;
 }
 body {
+  	background: linear-gradient(to right,#00BCD4,#95E3ED,#00BCD4);
 	font-family: 'Nunito', sans-serif;
 }
 .backthemed {
-	background: linear-gradient(to right,#00B953,#B3FFD5,#00B953);
 	padding: 4rem 0;
 	height: 100%;
 }
@@ -83,14 +83,14 @@ section#experience .card {
 }
 .badge-mine {
 	color: #FFFFFF;
-	background-color: #00B953;
+	background-color: #00BCD4;
 	font-weight: 500;
 }
 .folio-inner {
 	opacity: 0;
 	display: flex;
 	flex-flow: column wrap;
-	color: #00B953;
+	color: #00BCD4;
 	justify-content: center;
 	align-items: center;
 }
@@ -145,7 +145,7 @@ div#minimenu.show {
 	color: #FF5722;
 }
 .social-links a span {
-	color: #00B953;
+	color: #00BCD4;
 }
 .list-no-style {
 	list-style: none;
@@ -198,11 +198,14 @@ label{
     font-size: 1.4rem;
 }
 .btn-mine {
-	border: solid .125rem #FF5722;
+	border: solid .125rem #00BCD4;
+	color: #00BCD4;
+	font-weight: 600;
 }
 .btn-mine:hover {
 	background-color: #FF5722;
 	color: #FFFFFF;
+	border-color: #FF5722;
 }
 #top-scroll {
 	display: none;
