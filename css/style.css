@@ -64,8 +64,39 @@ a:hover{
 section#intro .card{
 	background-image: url(../img/website.webp);
 }
-section#portfolio .card {
+section#experience .card {
 	background-image: url(../img/work.webp);
+}
+.folio img {
+	position: relative;
+}
+.folio-inner {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.folio-inner a {
+	font-weight: 600;
+	font-size: 1.2rem;
+}
+.badge-mine {
+	color: #FFFFFF;
+	background-color: #00B953;
+	font-weight: 500;
+}
+.folio-inner {
+	opacity: 0;
+	display: flex;
+	flex-flow: column wrap;
+	color: #00B953;
+	justify-content: center;
+	align-items: center;
+}
+.folio-inner:hover {
+	background: rgba(10, 12, 11, 0.8);
+	opacity: 1;
 }
 .theme-card{
 	border-radius: .8rem;
