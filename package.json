@@ -1,0 +1,14 @@
+{
+  "name": "simple-lambdas",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "netlify-lambda serve src/functions",
+    "build": "netlify-lambda build src/functions"
+  },
+  "dependencies": {
+    "netlify-lambda": "^0.4.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
