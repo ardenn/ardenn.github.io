@@ -1,0 +1,28 @@
+# Ouma Rodgers - The first of his name
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+This is my personal website. You can pay me a visit at https://www.rodgersouma.com
+
+- Icons by [mdi](https://materialdesignicons.com)
+- Fonts by [Google Fonts](https://fonts.google.com/?query=nunito)
+
+- Built with:
+  - VSCode
+  - HTML + CSS + JS
+  - [Bootstrap 4](http://getbootstrap.com)
+  - [Animate.css](https://daneden.github.io/animate.css/)
+  - Netlify
+
+## Structure
+Its a single page, static website with all the HTML markup in `index.html`.
+All the static resources can be found under the `css`/ `js`/ and `img` directories.
+The contact me form is powered by [Netlify Forms](https://www.netlify.com/docs/form-handling/), through an Ajax submission.
+
+## Hosting
+The static website is hosted on [Netlify](https://netlify.com) under the free plan.
+
+## Analytics
+Site analytics are gathered and reported by [Google Analytics](https://analytics.google.com)
+
+## Licence
+[MIT](https://choosealicense.com/licenses/mit/#)
