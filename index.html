@@ -13,7 +13,7 @@
 		<title>Ouma Rodgers - The first of his name</title>
 
 		<!-- Style sheets -->
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/materialize.min.css" />
 		<link rel="stylesheet" href="fonts/material-design-icons/css/materialdesignicons.min.css" />
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/style.css" />
@@ -37,7 +37,22 @@
 	</head>
 
 	<body>
-		<section class="backthemed" id="intro">
+		<header>
+			<div id="header">
+				<div id="head-wrapper">
+					<div id="logo">
+						<img src="img/rodgers.jpeg" height="150">
+					</div>
+					<div id="myname">Ouma Rodgers</div>
+					<div id="slogan">Software Engineer | Data Analyst | Entrepreneur</div>
+				</div>
+			</div>
+			<div class="overlay"></div>
+		</header>
+		<main>
+			<section id="info"></section>
+		</main>
+		<!-- <section class="backthemed" id="intro">
 			<div class="container">
 				<div class="card theme-card">
 					<nav class="top-nav">
@@ -333,14 +348,14 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<footer class="text-center pt-3">
 			Copyright &copy; Ouma Rodgers
 			<script>document.write(new Date().getFullYear())</script><br> Made with <span class="mdi mdi-heart"></span> by <a
 			 href="https://twitter.com/mc_alila">me</a>
 		</footer>
 
-		<div id="minimenu" class="card animated">
+		<!-- <div id="minimenu" class="card animated">
 			<div class="mininav pb-4">
 				<div class="brand">Ouma Rodgers</div>
 				<span class="mdi mdi-close has-cursor" onclick="closeMiniBar()"></span>
@@ -380,31 +395,12 @@
 					<span class="mdi mdi-telegram"></span>
 				</a>
 			</div>
-		</div>
-		<span id="top-scroll" onclick="upScroll()" class="has-cursor">
+		</div> -->
+		<!-- <span id="top-scroll" onclick="upScroll()" class="has-cursor">
 			<i class="mdi mdi-chevron-up"></i>
-		</span>
-		<!--====== Javascript & Jquery ======-->
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script>
-			$("#my-form").submit(function (e) {
-				e.preventDefault();
-
-				var $form = $(this);
-				$.post($form.attr("action"), $form.serialize())
-					.then(function () {
-						$("#form-success").show();
-						setTimeout(function () { $("#form-success").hide(); }, 5000);
-						$("#my-form").trigger("reset");
-					})
-					.catch(function () {
-						$("#form-failure").show();
-						setTimeout(function () { $("#form-failure").hide(); }, 5000);
-					});
-			});
-
-		</script>
-		<script src="js/bootstrap.min.js"></script>
+		</span> -->
+		<!--====== Javascript ======-->
+		<script src="js/materialize.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 
