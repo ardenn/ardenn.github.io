@@ -14,7 +14,7 @@
 
 		<!-- Style sheets -->
 		<link rel="stylesheet" href="css/materialize.min.css" />
-		<link rel="stylesheet" href="fonts/material-design-icons/css/materialdesignicons.min.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/style.css" />
 
@@ -37,369 +37,232 @@
 	</head>
 
 	<body>
-		<header>
-			<div id="header">
-				<div id="head-wrapper">
-					<div id="logo">
-						<img src="img/rodgers.jpeg" height="150">
-					</div>
-					<div id="myname">Ouma Rodgers</div>
-					<div id="slogan">Software Engineer | Data Analyst | Entrepreneur</div>
+		<section id="intro">
+			<div class="wrapper">
+				<div id="logo">
+					<img src="img/rodgers.jpeg" height="150">
 				</div>
+				<div id="myname">Ouma Rodgers</div>
+				<div id="slogan">Software Engineer | Data Analyst | Entrepreneur</div>
 			</div>
 			<div class="overlay"></div>
-		</header>
-		<main>
-			<section id="info"></section>
-		</main>
-		<!-- <section class="backthemed" id="intro">
-			<div class="container">
-				<div class="card theme-card">
-					<nav class="top-nav">
-						<div class="brand bottomed">Ouma Rodgers</div>
-						<div class="nav-actions">
-							<span class="has-cursor" id="toggler" onclick="toggleMiniBar()">
-								<span class="mdi mdi-menu"></span>
-							</span>
+		</section>
+		<section id="info">
+			<div class="wrapper">
+				<div class="card-panel">
+					<div id="skills" class="spaced">
+						<img src="img/svg/python-5.svg" alt="python" height="70" title="Python">
+						<img src="img/svg/angular-icon-1.svg" alt="angular" height="70" title="Angular">
+						<img src="img/svg/django.svg" alt="django" height="70" title="Django">
+						<img src="img/svg/nodejs-icon.svg" alt="nodejs" height="70" title="NodeJS">
+					</div>
+					<p id="bio">
+						I am a Software Engineer and Data Analyst with experience in banking, insurance, software design and development.
+						My work includes web and mobile software development, data analysis, machine learning, business strategy and risk
+						analysis. I am a team-player and a fast-learner always trying to learn something new. I also have other skills.
+					</p>
+					<div id="skillSmall" class="spaced">
+						<img src="img/svg/aws-logo.svg" alt="Amazon Web Services" height="30" title="Amazon Web Services">
+						<img src="img/svg/bitbucket.svg" alt="Bitbucket" height="30" title="Bitbucket">
+						<img src="img/svg/css3.svg" alt="CSS3" height="30" title="CSS3">
+						<img src="img/svg/git-icon.svg" alt="Git Version Control" height="30" title="Git Version Control">
+						<img src="img/svg/github-icon-1.svg" alt="Github" height="30" title="Github">
+						<img src="img/svg/javascript.svg" alt="Javascript" height="30" title="Javascript">
+						<img src="img/svg/linux-tux.svg" alt="Linux" height="30" title="Linux">
+						<img src="img/svg/meteor-icon.svg" alt="MeteorJS" height="30" title="MeteorJS">
+						<img src="img/svg/nodejs-1.svg" alt="NodeJS" height="30" title="NodeJS">
+						<img src="img/svg/postgresql.svg" alt="Postgresql" height="30" title="Postgresql">
+						<img src="img/svg/typescript.svg" alt="Typescript" height="30" title="Typescript">
+						<img src="img/svg/mysql-6.svg" alt="Mysql" height="30" title="Mysql">
+						<img src="img/svg/html-5.svg" alt="HTML5" height="30" title="HTML5">
+						<img src="img/svg/heroku.svg" alt="Heroku" height="30" title="Heroku">
+					</div>
+					<div id="timeline">
+						<div class="entry entry-left">
+							<div class="content">
+								<div class="title">Sept, 2018 - Present</div>
+								<div class="jd">Tech Lead, <a href="https://www.namespace.co.ke">Namespace Africa</a></div>
+								<div class="body">
+									<p>At Namespace we help SMEs and other businesses make sense of their data. We build tools to help these
+										enterprises take charge of their data flow, harvest this data and generate useful insight from it. We have
+										previously developed and deployed several machine learning and data visualization models to help our clients
+										offer data driven services.</p>
+								</div>
+							</div>
 						</div>
-					</nav>
-					<div id="introbody" class="row">
-						<div class="col">
-							<div class="intro-title">
-								<p>Software Engineer</p>
-								<p>Data & Actuarial Analyst</p>
-								<p>Entrepreneur</p>
+						<div class="entry entry-right">
+							<div class="content">
+								<div class="title">Apr, 2018 - Aug, 2018</div>
+								<div class="jd">CTO, <a href="https://www.qalisi.com">Qalisi</a></div>
+								<div class="body">
+									<p>Qalisi - Aptly described as Africa's largest community of theatrical talent and creative performers, is a
+										startup in Accra, Ghana. The company provides talented individuals with a platform to maintain their
+										portfolio and get exposure to film producers from all over Africa. The platform also provides a video-based
+										casting tool for producers to collaboratively recruit talent at their own convenience.</p>
+								</div>
+							</div>
+						</div>
+						<div class="entry entry-left">
+							<div class="content">
+								<div class="title big">Aug, 2017 - Aug, 2018</div>
+								<div class="jd">EiT, <a href="https://www.meltwater.org">MEST Africa</a></div>
+								<div class="body">
+									<p>MEST is a non-profit arm of the global media monitoring and analytics giant - Meltwater Group. Every year
+										MEST brings together top participants from most countries across Africa to their campus located in
+										Accra,Ghana for an intensive 12-month program. During this period, the Entrepreneurs-in-Training(EiTs), get
+										to learn about Software Development, Business and Communication from world-class fellows. At the end, the
+										goal is for the EiTs to establish successful software startups, with an initial seed funding from MEST. This
+										initiative has since invested in 35+ companies across Africa.</p>
+								</div>
+							</div>
+						</div>
+						<div class="entry entry-right">
+							<div class="content">
+								<div class="title">Oct, 2016 - Aug, 2017</div>
+								<div class="jd">Operations Assistant, <a href="https://www.cbagroup.com">CBA</a></div>
+								<div class="body">
+									<p>CBA is one of the leading top-tier banks in Kenya, with offices in 4 african countries. With 60+ yeas of
+										operation behind it, the bank prides itself in providing customers with exceptional financial services that
+										enable them to save, invest and grow their wealth. By offering services that are simple and effective the
+										bank strives to give clients time for more.</p>
+								</div>
+							</div>
+						</div>
+						<div class="entry entry-left">
+							<div class="content">
+								<div class="title">Jun - Aug, 2016</div>
+								<div class="jd">Intern, <a href="https://www.geminia.co.ke">Geminia Insurance</a></div>
+								<div class="body">
+									<p>Geminia Insurance is one of Kenya's oldest insurance companies, specializing in general insurance.</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="backthemed" id="about">
-			<div class="container">
-				<div class="card theme-card">
-					<nav class="top-nav">
-						<div class="brand bottomed">About Me</div>
-						<div class="nav-actions">
-							<span class="has-cursor" id="toggler" onclick="toggleMiniBar()">
-								<span class="mdi mdi-menu"></span>
-							</span>
-						</div>
-					</nav>
-					<div class="mt-3">
-						<p class="pb-4">
-							I am a Software Engineer with up to 3 years experience in banking, insurance, software design and development.
-							My work includes
-							web and mobile software development, data analysis, machine learning, business strategy and risk analysis. I am
-							a
-							team-player, and a fast-learner, always trying to learn something new.
-						</p>
-						<div class="tech-stack">
-							<ul class="list-no-style pl-0">
-								<li><span class="subtitle">Domains: </span>Banking, Insurance, FinTech, Ecommerce and Creative & Entertainment.
-									Tech
-								</li>
-								<li><span class="subtitle">Tech Stacks: </span>Python/ Django/ Flask, Javascript/ Typescript/ Angular &
-									Nativescript,
-									MVC & Web API, HTML/CSS/JS</li>
-								<li><span class="subtitle">Databases: </span>Postgresql, MySQL, SQlite</li>
-								<li><span class="subtitle">API Specs: </span>REST</li>
-								<li><span class="subtitle">Message Queueing: </span>Celery + Redis </li>
-								<li><span class="subtitle">Infrastructure: </span>Heroku, Netlify, Digital Ocean, Google Cloud</li>
-								<li><span class="subtitle">Continuous Integration: </span>Git, Heroku pipelines, Github, Bitbucket</li>
-								<li><span class="subtitle">Operating Systems: </span>Linux (Ubuntu, Linux Mint), MS Windows</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="backthemed" id="experience">
-			<div class="container">
-				<div class="card theme-card">
-					<nav class="top-nav">
-						<div class="brand bottomed">Experience</div>
-						<div class="nav-actions">
-							<span class="has-cursor" id="toggler" onclick="toggleMiniBar()">
-								<span class="mdi mdi-menu"></span>
-							</span>
-						</div>
-					</nav>
-					<div class="mt-3">
-						<ul class="portfolio list-no-style pl-0">
-							<li>
-								<div class="text-title"><span class="mdi mdi-calendar"></span> Apr 2018-Present</div>
-								<div class="text-title"><span class="mdi mdi-map-marker"></span> Qalisi Inc</div>
-								<div class="text-title"><span class="mdi mdi-briefcase-outline"></span> Chief Technology Officer</div>
-								<p>Qalisi - Aptly described as Africa's largest community of theatrical talent and creative performers, is a
-									startup
-									in Accra, Ghana. The company provides talented individuals with a platform to maintain their portfolio and get
-									exposure
-									to film producers from all over Africa. The platform also provides a video-based casting tool for producers to
-									collaboratively
-									recruit talent at their own convenience.</p>
-							</li>
-							<div class="text-center font-bold py-4 text-accent">* * *</div>
-							<li>
-								<div class="text-title"><span class="mdi mdi-calendar"></span> Aug 2017- Aug 2018</div>
-								<div class="text-title"><span class="mdi mdi-map-marker"></span> Meltwater Entrepreneurial School of Technology</div>
-								<div class="text-title"><span class="mdi mdi-briefcase-outline"></span> Entrepreneur in Training</div>
-								<p>MEST is a non-profit arm of the global media monitoring and analytics giant - Meltwater Group. Every year
-									MEST
-									brings together top participants from 6 countries across Africa to their campus located in Accra,Ghana for an
-									intensive
-									12-month program.During this period, the Entrepreneurs-in-Training(EiTs), get to learn about Software
-									Development,
-									Business and Communication from world-class fellows. At the end, the goal is for the EiTs to establish
-									successful
-									software startups, with an initial seed funding from MEST. This initiative has since invested in 25+ companies
-									across
-									Africa.
-								</p>
-							</li>
-							<div class="text-center font-bold py-4 text-accent">* * *</div>
-							<li>
-								<div class="text-title"><span class="mdi mdi-calendar"></span> May 2017- August 2017</div>
-								<div class="text-title"><span class="mdi mdi-map-marker"></span> Commercial Bank of Africa</div>
-								<div class="text-title"><span class="mdi mdi-briefcase-outline"></span> Operations Assistant</div>
-								<p>CBA is one of the leading top-tier banks in Kenya, with offices in 4 african countries. With 60+ yeas of
-									operation
-									behind it, the bank prides itself in providing customers with exceptional financial services that enable them
-									to
-									save, invest and grow their wealth. By offering services that are simple and effective the bank strives to
-									give
-									clients time for more.</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="backthemed" id="portfolio">
-			<div class="container">
-				<div class="card theme-card">
-					<nav class="top-nav">
-						<div class="brand bottomed">Portfolio</div>
-						<div class="nav-actions">
-							<span class="has-cursor" id="toggler" onclick="toggleMiniBar()">
-								<span class="mdi mdi-menu"></span>
-							</span>
-						</div>
-					</nav>
-					<div class="card-columns mt-3">
+		<section id="work">
+			<div class="wrapper">
+				<div class="section-title">Some of my work</div>
+				<div class="row">
+					<div class="col s12 m4 l3">
 						<div class="card">
-							<div class="card-body p-1 folio">
-								<img src="./img/qalisi-app.webp" class="img-fluid">
-								<div class="card-body folio-inner">
-									<a href="https://beta.qalisi.com" target="_blank">Qalisi App</a>
-									<div>
-										<span class="badge badge-mine">Django</span>
-										<span class="badge badge-mine">Angular 6</span>
-										<span class="badge badge-mine">Netlify</span>
-										<span class="badge badge-mine">Heroku</span>
-									</div>
-								</div>
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="img/qalisi-app.webp">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Qalisi App<i class="material-icons right">more_vert</i></span>
+								<p><a href="https://unstable.qalisi.com">View</a></p>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Qalisi Web Platform<i class="material-icons right">close</i></span>
+								<p>Here is some more information about this product that is only revealed once clicked on.</p>
 							</div>
 						</div>
+					</div>
+					<div class="col s12 m4 l3">
 						<div class="card">
-							<div class="card-body p-1 folio">
-								<img src="./img/qalisi.webp" class="img-fluid">
-								<div class="card-body folio-inner">
-									<a href="https://www.qalisi.com" target="_blank">Qalisi Landing Page</a>
-									<div>
-										<span class="badge badge-mine">HTML</span>
-										<span class="badge badge-mine">CSS</span>
-										<span class="badge badge-mine">JS</span>
-										<span class="badge badge-mine">Netlify</span>
-									</div>
-								</div>
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="img/qalisi.webp">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Qalisi Website<i class="material-icons right">more_vert</i></span>
+								<p><a href="https://www.qalisi.com">View</a></p>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Qalisi Website<i class="material-icons right">close</i></span>
+								<p>Here is some more information about this product that is only revealed once clicked on.</p>
 							</div>
 						</div>
+					</div>
+					<div class="col s12 m4 l3">
 						<div class="card">
-							<div class="card-body p-1 folio">
-								<img src="./img/gambb.webp" class="img-fluid">
-								<div class="card-body folio-inner">
-									<a href="https://www.gambb.com" target="_blank">Gambb Landing Page</a>
-									<div>
-										<span class="badge badge-mine">HTML</span>
-										<span class="badge badge-mine">CSS</span>
-										<span class="badge badge-mine">JS</span>
-										<span class="badge badge-mine">Netlify</span>
-									</div>
-								</div>
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="img/predictive.webp">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Analytics<i class="material-icons right">more_vert</i></span>
+								<p><a href="https://app.predictiveanalytics.co.ke">View</a></p>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Predictive Analytics<i class="material-icons right">close</i></span>
+								<p>Here is some more information about this product that is only revealed once clicked on.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m4 l3">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="img/gambb.webp">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Gambb Website<i class="material-icons right">more_vert</i></span>
+								<p><a href="https://www.gambb.com">View</a></p>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Gambb Website<i class="material-icons right">close</i></span>
+								<p>Here is some more information about this product that is only revealed once clicked on.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m4 l3">
+						<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="img/website.webp">
+							</div>
+							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Home<i class="material-icons right">more_vert</i></span>
+								<p><a href="https://www.rodgersouma.com">View</a></p>
+							</div>
+							<div class="card-reveal">
+								<span class="card-title grey-text text-darken-4">Home<i class="material-icons right">close</i></span>
+								<p>Here is some more information about this product that is only revealed once clicked on.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="backthemed" id="education">
-			<div class="container">
-				<div class="card theme-card">
-					<nav class="top-nav">
-						<div class="brand bottomed">Education</div>
-						<div class="nav-actions">
-							<span class="has-cursor" id="toggler" onclick="toggleMiniBar()">
-								<span class="mdi mdi-menu"></span>
-							</span>
-						</div>
-					</nav>
-					<div class="mt-3">
-						<ul class="education list-no-style pl-0">
-							<li>
-								<div class="text-title"><span class="mdi mdi-calendar"></span> 2018</div>
-								<div class="text-title"><span class="mdi mdi-school"></span> Software Entrepreneurship</div>
-								<div class="text-title"><span class="mdi mdi-map-marker"></span>MEST</div>
-								<p>Graduated from MEST after successfully undergoing an intense 1-year course covering software engineering,
-									business,
-									communication and entrepreneurship.</p>
-							</li>
-							<div class="text-center font-bold py-4 text-accent">* * *</div>
-							<li>
-								<div class="text-title"><span class="mdi mdi-calendar"></span> 2016</div>
-								<div class="text-title"><span class="mdi mdi-school"></span> BSc Actuarial Science</div>
-								<div class="text-title"><span class="mdi mdi-map-marker"></span>Jomo Kenyatta University of Agriculture and
-									Technology</div>
-								<p>Graduated from JKUAT with a Second Class(Upper Division) degree in Actuarial science after undergoing the
-									4-year
-									course.
-								</p>
-							</li>
-						</ul>
+		<section id="recommendations">
+			<div class="wrapper">
+				<div class="section-title">What people say about me</div>
+				<div class="carousel">
+					<div class="carousel-item">
+						<blockquote>
+							<p class="flow-text">
+
+							</p>
+						</blockquote>
+						<div class="divider"></div>
+						<span>Andrew</span>
+					</div>
+					<div class="carousel-item">
+						<blockquote>
+							<p class="flow-text">
+
+							</p>
+						</blockquote>
+						<div class="divider"></div>
+						<span>Andrew</span>
+					</div>
+					<div class="carousel-item">
+						<blockquote>
+							<p class="flow-text">
+
+							</p>
+						</blockquote>
+						<div class="divider"></div>
+						<span>Andrew</span>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="backthemed" id="contact">
-			<div class="container">
-				<div class="card theme-card">
-					<nav class="top-nav">
-						<div class="brand bottomed">Contact Me</div>
-						<div class="nav-actions">
-							<span class="has-cursor" id="toggler" onclick="toggleMiniBar()">
-								<span class="mdi mdi-menu"></span>
-							</span>
-						</div>
-					</nav>
-					<div class="mt-3">
-						<div class="row">
-							<div class="col-xl-8 offset-xl-2 col-12">
-								<div id="contact-me">
-									<form id="my-form" name="contact" method="POST" netlify netlify-honeypot="bot-field">
-										<p hidden>
-											<label>Don’t fill this out if you're human:
-												<input name="bot-field" />
-											</label>
-										</p>
-										<div class="form-group">
-											<label for="contact-name">Name</label>
-											<input type="text" class="form-control" id="contact-name" placeholder="Jon Snow" name="name" required>
-										</div>
-										<div class="form-group">
-											<label for="contact-email">Email</label>
-											<input type="email" class="form-control" id="contact-email" placeholder="jon@snow.com" name="email" required>
-										</div>
-										<div class="form-group">
-											<label for="contact-message">Message</label>
-											<textarea type="textarea" class="form-control" rows="3" id="contact-message" placeholder="Enter message here..."
-											 name="message" required></textarea>
-										</div>
-										<div class="form-group">
-											<button type="submit" class="form-control btn btn-mine">Send</button>
-										</div>
-										<p id="form-success" class="alert alert-success" style="display: none">
-											Thank you, I will be in touch.
-										</p>
-										<p id="form-failure" class="alert alert-danger" style="display: none">
-											Sorry, Please try again.
-										</p>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="row contact-details">
-							<div class="col-6 col-lg text-center">
-								<p class="contact-h">Address</p>
-								<p>Nairobi | Kenya</p>
-								<p>Homa Bay | Kenya</p>
-							</div>
-							<div class="col-6 col-lg text-center">
-								<p class="contact-h">Lets Chat</p>
-								<p>
-									<a href="https://t.me/mc_alila">
-										<span class="mdi mdi-telegram"></span> Telegram</a>
-								</p>
-								<p>
-									<a href="https://api.whatsapp.com/send?phone=254700035576&text=Hi%20Rodgers,%20Found%20you%20from%20your%20website">
-										<span class="mdi mdi-whatsapp"></span> WhatsApp</a>
-								</p>
-							</div>
-							<div class="col-12 col-lg text-center">
-								<p class="contact-h">
-									<span class="mdi mdi-envelope"></span> Email</p>
-								<p>
-									<a href="mailto:hello@rodgersouma.com">hello@rodgersouma.com</a>
-								</p>
-								<p>
-									<a href="mailto:rodgers.ouma@meltwater.org">rodgers.ouma@meltwater.org</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
 		<footer class="text-center pt-3">
 			Copyright &copy; Ouma Rodgers
 			<script>document.write(new Date().getFullYear())</script><br> Made with <span class="mdi mdi-heart"></span> by <a
 			 href="https://twitter.com/mc_alila">me</a>
 		</footer>
 
-		<!-- <div id="minimenu" class="card animated">
-			<div class="mininav pb-4">
-				<div class="brand">Ouma Rodgers</div>
-				<span class="mdi mdi-close has-cursor" onclick="closeMiniBar()"></span>
-			</div>
-			<ul class="list-no-style pl-2 pb-4 has-cursor">
-				<li><a href="#intro" onclick="slowScroll(this);return false">Home</a></li>
-				<li><a href="#about" onclick="slowScroll(this);return false">About</a></li>
-				<li><a href="#experience" onclick="slowScroll(this);return false">Experience</a></li>
-				<li><a href="#portfolio" onclick="slowScroll(this);return false">Portfolio</a></li>
-				<li><a href="#education" onclick="slowScroll(this);return false">Education</a></li>
-				<li><a href="#contact" onclick="slowScroll(this);return false">Contact</a></li>
-			</ul>
-			<div class="social-links">
-				<a href="https://github.com/ardenn" target="_blank" class="px-2">
-					<span class="mdi mdi-github-circle"></span>
-				</a>
-				<a href="https://www.linkedin.com/in/rodgers-ouma/" target="_blank" class="px-2">
-					<span class="mdi mdi-linkedin"></span>
-				</a>
-				<a href="https://www.instagram.com/mc_alila/" target="_blank" class="px-2">
-					<span class="mdi mdi-instagram"></span>
-				</a>
-				<a href="https://www.facebook.com/rodgers.ouma.3" target="_blank" class="px-2">
-					<span class="mdi mdi-facebook"></span>
-				</a>
-				<a href="https://twitter.com/mc_alila" target="_blank" class="px-2">
-					<span class="mdi mdi-twitter"></span>
-				</a>
-				<a href="https://medium.com/@mc_alila" target="_blank" class="px-2">
-					<span class="mdi mdi-medium"></span>
-				</a>
-				<a href="https://api.whatsapp.com/send?phone=254700035576&text=Hi%20Rodgers,%20Found%20you%20from%20your%20website"
-				 target="_blank" class="px-2">
-					<span class="mdi mdi-whatsapp"></span>
-				</a>
-				<a href="https://t.me/mc_alila" target="_blank" class="px-2">
-					<span class="mdi mdi-telegram"></span>
-				</a>
-			</div>
-		</div> -->
-		<!-- <span id="top-scroll" onclick="upScroll()" class="has-cursor">
-			<i class="mdi mdi-chevron-up"></i>
-		</span> -->
-		<!--====== Javascript ======-->
 		<script src="js/materialize.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
