@@ -31,6 +31,6 @@ contactForm.addEventListener("submit", function (event) {
         }
     };
 
-    var data = `form-name=leads&bot-field=${document.getElementById("bot-field").value}&name=${document.getElementById("name").value}&email=${document.getElementById("email").value}&message=${document.getElementById("message").value}&web=${document.getElementById("web").value}&mobile=${document.getElementById("mobile").value}&software=${document.getElementById("software").value}&visualization=${document.getElementById("visualization").value}&analysis=${document.getElementById("analysis").value}&machine=${document.getElementById("machine").value}`;
+    var data = `form-name=contacts&bot-field=${document.getElementById("bot-field").value}&name=${document.getElementById("name").value}&email=${document.getElementById("email").value}&message=${document.getElementById("message").value}&web=${document.getElementById("web").value}&mobile=${document.getElementById("mobile").value}&software=${document.getElementById("software").value}&visualization=${document.getElementById("visualization").value}&analysis=${document.getElementById("analysis").value}&machine=${document.getElementById("machine").value}`;
     request.send(data);
 });  
