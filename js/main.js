@@ -16,12 +16,12 @@ contactForm.addEventListener("submit", function (event) {
                 document.getElementById("name").value = null;
                 document.getElementById("message").value = null;
                 document.getElementById("email").value = null;
-                document.getElementById("web").value = null;
-                document.getElementById("mobile").value = null;
-                document.getElementById("software").value = null;
-                document.getElementById("visualization").value = null;
-                document.getElementById("analysis").value = null;
-                document.getElementById("machine").value = null;
+                document.getElementById("web").checked = false;
+                document.getElementById("mobile").checked = false;
+                document.getElementById("software").checked = false;
+                document.getElementById("visualization").checked = false;
+                document.getElementById("analysis").checked = false;
+                document.getElementById("machine").checked = false;
                 // success END
             } else {
                 // error START
@@ -31,6 +31,6 @@ contactForm.addEventListener("submit", function (event) {
         }
     };
 
-    var data = `form-name=contacts&bot-field=${document.getElementById("bot-field").value}&name=${document.getElementById("name").value}&email=${document.getElementById("email").value}&message=${document.getElementById("message").value}&web=${document.getElementById("web").value}&mobile=${document.getElementById("mobile").value}&software=${document.getElementById("software").value}&visualization=${document.getElementById("visualization").value}&analysis=${document.getElementById("analysis").value}&machine=${document.getElementById("machine").value}`;
+    var data = `form-name=contacts&bot-field=${document.getElementById("bot-field").value}&name=${document.getElementById("name").value}&email=${document.getElementById("email").value}&message=${document.getElementById("message").value}&web=${document.getElementById("web").checked}&mobile=${document.getElementById("mobile").checked}&software=${document.getElementById("software").checked}&visualization=${document.getElementById("visualization").checked}&analysis=${document.getElementById("analysis").checked}&machine=${document.getElementById("machine").checked}`;
     request.send(data);
 });  
