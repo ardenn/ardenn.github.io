@@ -4,7 +4,7 @@ var contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
     var textFields = ["bot-field", "name", "email", "message"]
-    var checkedFields = ["web", "mobile", "software", "visualization", "analysis", "machine"]
+    var checkedFields = ["web", "mobile", "software", "visualization", "analysis", "machine", "automation"]
     var request = new XMLHttpRequest();
     request.open("POST", "/", true);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;  charset=UTF-8");
