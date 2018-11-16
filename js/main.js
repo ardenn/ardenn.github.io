@@ -5,7 +5,6 @@ contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
     var textFields = ["bot-field", "name", "email", "message"]
     var checkedFields = ["web", "mobile", "software", "visualization", "analysis", "machine"]
-    var checkedData = [];
     var request = new XMLHttpRequest();
     request.open("POST", "/", true);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;  charset=UTF-8");
@@ -30,16 +29,14 @@ contactForm.addEventListener("submit", function (event) {
             }
         }
     };
-
+    var data = "form-name=contacts";
     checkedFields.forEach(field => {
         if (document.getElementById(field).checked) {
-            checkedData.push(field);
+            data += `&${field}=${document.getElementById(field).checked}`
         }
     })
-    var data = "form-name=contacts";
     textFields.forEach(field => {
         data += `&${field}=${document.getElementById(field).value}`
     })
-    data += `&jobs=${checkedData.toString()}`
     request.send(data);
 });  
