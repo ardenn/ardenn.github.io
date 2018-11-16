@@ -3,6 +3,9 @@ var contactForm = document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
+    var textFields = ["bot-field", "name", "email", "message"]
+    var checkedFields = ["web", "mobile", "software", "visualization", "analysis", "machine"]
+    var checkedData = [];
     var request = new XMLHttpRequest();
     request.open("POST", "/", true);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;  charset=UTF-8");
@@ -13,15 +16,12 @@ contactForm.addEventListener("submit", function (event) {
             if (request.status == 200) {
                 // success START
                 M.toast({ html: 'Success! Message Sent', classes: "green" });
-                document.getElementById("name").value = null;
-                document.getElementById("message").value = null;
-                document.getElementById("email").value = null;
-                document.getElementById("web").checked = false;
-                document.getElementById("mobile").checked = false;
-                document.getElementById("software").checked = false;
-                document.getElementById("visualization").checked = false;
-                document.getElementById("analysis").checked = false;
-                document.getElementById("machine").checked = false;
+                textFields.forEach(field => {
+                    document.getElementById(field).value = null;
+                })
+                checkedFields.forEach(field => {
+                    document.getElementById(field).checked = false;
+                })
                 // success END
             } else {
                 // error START
@@ -31,6 +31,15 @@ contactForm.addEventListener("submit", function (event) {
         }
     };
 
-    var data = `form-name=contacts&bot-field=${document.getElementById("bot-field").value}&name=${document.getElementById("name").value}&email=${document.getElementById("email").value}&message=${document.getElementById("message").value}&web=${document.getElementById("web").checked}&mobile=${document.getElementById("mobile").checked}&software=${document.getElementById("software").checked}&visualization=${document.getElementById("visualization").checked}&analysis=${document.getElementById("analysis").checked}&machine=${document.getElementById("machine").checked}`;
+    checkedFields.forEach(field => {
+        if (document.getElementById(field).checked) {
+            checkedData.push(field);
+        }
+    })
+    var data = "form-name=contacts";
+    textFields.forEach(field => {
+        data += `&${field}=${document.getElementById(field).value}`
+    })
+    data += `&jobs=${checkedData.toString()}`
     request.send(data);
 });  

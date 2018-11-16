@@ -97,12 +97,22 @@ body {
 .card {
     border-radius: 10px;
 }
+.work-card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
 .card .card-image img {
     border-radius: 8px 8px 0px 0px!important;
 }
+.card-image+.card-content {
+    max-height: unset!important;
+}
 .flex {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 .author {
     font-style: italic;
@@ -128,7 +138,7 @@ section#hire::before {
     top: -3.5rem;
     height: 5rem;
 }
-.card-image {
+.padded-image {
     padding: 1rem;
 }
 .hidden {
@@ -149,4 +159,12 @@ form .card-content p {
 footer {
     padding: 2rem 0;
     font-size: 1.2rem;
+}
+.reveal-tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.reveal-tags span {
+    margin: .2rem 0!important;
 }
