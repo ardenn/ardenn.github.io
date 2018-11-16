@@ -168,3 +168,14 @@ footer {
 .reveal-tags span {
     margin: .2rem 0!important;
 }
+@media only screen and (min-width: 0){
+    section#hire::before {
+    top: -1rem;
+    }
+    section#info::before {
+        top: 5.1rem;
+    }
+}
+a {
+    color: #000000;
+}
