@@ -31,9 +31,7 @@ contactForm.addEventListener("submit", function (event) {
     };
     var data = "form-name=contacts";
     checkedFields.forEach(field => {
-        if (document.getElementById(field).checked) {
-            data += `&${field}=${document.getElementById(field).checked}`
-        }
+        data += document.getElementById(field).checked ? `&${field}=Yes` : `&${field}=No`;
     })
     textFields.forEach(field => {
         data += `&${field}=${document.getElementById(field).value}`
