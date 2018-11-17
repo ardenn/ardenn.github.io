@@ -93,6 +93,7 @@ body {
 }
 .spaced > * {
     cursor: pointer;
+    padding: .2rem;
 }
 .card {
     border-radius: 10px;
