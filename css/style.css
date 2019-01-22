@@ -180,3 +180,12 @@ footer {
 a {
     color: #000000;
 }
+.toggleable {
+    display: none;
+}
+.toggle {
+    cursor: pointer;
+    font-size: .8rem;
+    color: #FFFFFF;
+    font-weight: 700;
+}

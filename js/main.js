@@ -1,4 +1,3 @@
-M.AutoInit();
 var contactForm = document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", function (event) {
@@ -37,4 +36,20 @@ contactForm.addEventListener("submit", function (event) {
         data += `&${field}=${document.getElementById(field).value}`
     })
     request.send(data);
-});  
+});
+
+var collapsibleElements = document.querySelectorAll(".toggle");
+collapsibleElements.forEach(el => {
+    el.addEventListener("click", function (event) {
+        event.preventDefault()
+        var nextBodyList = event.target.nextElementSibling.classList;
+        if (nextBodyList.contains("toggleable")) {
+            nextBodyList.remove("toggleable");
+            nextBodyList.add("slideInDown");
+            event.target.innerText = "show less ...";
+        } else {
+            nextBodyList.add("toggleable");
+            event.target.innerText = "show more ...";
+        }
+    })
+});
