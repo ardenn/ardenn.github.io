@@ -45,7 +45,6 @@ collapsibleElements.forEach(el => {
         var nextBodyList = event.target.nextElementSibling.classList;
         if (nextBodyList.contains("toggleable")) {
             nextBodyList.remove("toggleable");
-            nextBodyList.add("slideInDown");
             event.target.innerText = "show less ...";
         } else {
             nextBodyList.add("toggleable");
