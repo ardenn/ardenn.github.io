@@ -2,7 +2,6 @@ secrets.txt
 .vscode
 .git
 .netlify
-package*.json
 node_modules
-!dist
+dist/
 .cache

@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ca113dd3-1357-4d70-8c63-3dfb699ef3d0/deploy-status)](https://app.netlify.com/sites/ardenn/deploys)
+
 # Ouma Rodgers - The first of his name
 
 This is my personal website. You can pay me a visit at https://www.rodgersouma.com
