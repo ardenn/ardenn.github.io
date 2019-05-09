@@ -1,3 +1,4 @@
+document.getElementById("year").innerText = new Date().getFullYear();
 var contactForm = document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", function (event) {
