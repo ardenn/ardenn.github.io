@@ -1,4 +1,4 @@
-@import '../fonts/font-face.css';
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap');
 @import '../css/timeline.css';
 body {
     font-family: 'Nunito', Courier, monospace;
