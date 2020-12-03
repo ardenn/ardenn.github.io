@@ -1,0 +1,8 @@
+baseURL: http://rodgersouma.org/
+languageCode: en-us
+title: Rodgers Ouma | First of his name
+params:
+  name: "Rodgers Ouma"
+build:
+  writeStats: true
+  useResourceCacheWhen: fallback

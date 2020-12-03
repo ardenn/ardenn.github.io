@@ -1,17 +1,8 @@
 {
-  "name": "ardenn.github.io",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:ardenn/ardenn.github.io.git",
-  "author": "ardenn <ardenn@users.noreply.github.com>",
-  "license": "MIT",
-  "scripts": {
-    "dev": "parcel index.html",
-    "prebuild": "rm -rf dist",
-    "build": "parcel build index.html"
-  },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
-  },
-  "dependencies": {}
+    "autoprefixer": "^10.0.4",
+    "postcss": "^8.1.13",
+    "tailwindcss": "^2.0.1",
+    "@tailwindcss/typography": "^0.3.1"
+  }
 }
