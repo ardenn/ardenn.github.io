@@ -2,6 +2,8 @@
 title: "First Article"
 date: 2020-12-03T17:55:11+03:00
 draft: true
+categories:
+- Programming
 ---
 
 ## Hello, I'm Rodgers!

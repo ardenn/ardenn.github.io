@@ -1,9 +1,9 @@
-<ul class="lg:text-lg xl:text-xl space-y-6 text-gray-700 py-6">
-    {{ range $post := .RegularPages }}
+<ul class="lg:text-lg xl:text-xl space-y-6 text-gray-700 py-6 dark:text-white">
+    {{ range . }}
     <li>
         <div class="leading-relaxed">
-            <a href="{{$post.Permalink}}" class="hover:underline">{{$post.Title}}</a>
-            <div class="text-gray-400">{{ $post.Date.Format "03.01.2006" }}</div>
+            <a href="{{.Permalink}}" class="hover:underline">{{.Title}}</a>
+            <div class="text-gray-400">{{ .Date.Format "03.01.2006" }}</div>
         </div>
     </li>
     {{ end }}

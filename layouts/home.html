@@ -1,5 +1,5 @@
 {{define "main" }}
-<article class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl min-w-full leading-relaxed">
+<article class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl min-w-full leading-relaxed dark:prose-dark">
     <p>{{ .Content }}</p>
 </article>
 <div class="flex justify-between items-center">
@@ -8,5 +8,5 @@
     <a href="{{ $page.Section }}" class="hover:underline text-gray-400">Read all posts</a>
 </div>
 <hr>
-{{ partial "item-list.html" . }}
+{{ partial "item-list.html" (first 3 .Site.RegularPages) }}
 {{end}}

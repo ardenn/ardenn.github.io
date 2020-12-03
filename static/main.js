@@ -20,16 +20,22 @@ var lightButton = `<svg width="24" height="24" fill="currentColor" class="transi
         </svg>`
 
 function applyTheme() {
+    console.log("Theme aplied")
     var button = document.getElementById("dark-mode-button")
     if (isDark()) {
         document.querySelector('html').classList.add('dark')
+        localStorage.theme = "light"
         button.innerHTML = darkButton
     } else {
         document.querySelector('html').classList.remove('dark')
+        localStorage.theme = "dark"
         button.innerHTML = lightButton
     }
 }
 // window.onreadystatechange = (event) => applyTheme()
+document.addEventListener('DOMContentLoaded', function (event) {
+    applyTheme()
+})
 
 // Whenever the user explicitly chooses to respect the OS preference
 function useSystemTheme() {

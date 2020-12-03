@@ -5,6 +5,8 @@ draft: true
 tags:
 - first
 - second
+categories:
+- Programming
 ---
 
 ## Hello, I'm Rodgers!

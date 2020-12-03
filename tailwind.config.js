@@ -15,13 +15,33 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      typography: (theme) => ({
+        dark: {
+          css: {
+            color: theme('colors.white'),
+            h1: {
+              color: theme('colors.white'),
+            },
+            h2: {
+              color: theme('colors.white'),
+            },
+            a: {
+              color: theme('colors.white'),
+              '&:hover': {
+                color: theme('colors.white'),
+              },
+            },
+          },
+        },
+      }),
     },
     container: {
       center: true,
-      padding: "2rem"
+      padding: '2rem'
     },
   },
   variants: {
+    typography: ['responsive', 'dark'],
     extend: {},
   },
   plugins: [typography],
