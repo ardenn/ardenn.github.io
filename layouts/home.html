@@ -2,4 +2,11 @@
 <article class="prose prose-sm sm:prose lg:prose-lg xl:prose-xl min-w-full leading-relaxed">
     <p>{{ .Content }}</p>
 </article>
+<div class="flex justify-between items-center">
+    <h2 class="text-3xl font-medium py-4">Latest Posts</h2>
+    {{ $page := index .Site.RegularPages 0 }}
+    <a href="{{ $page.Section }}" class="hover:underline text-gray-400">Read all posts</a>
+</div>
+<hr>
+{{ partial "item-list.html" . }}
 {{end}}

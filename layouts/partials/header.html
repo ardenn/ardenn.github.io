@@ -1,6 +1,6 @@
 <div id="header">
     <div class="flex justify-between items-center pb-10">
-        <h1 class="text-3xl font-medium">{{.Site.Params.name}}</h1>
+        <a href="{{ .Site.Home.Permalink }}" class="text-3xl font-medium">{{.Site.Params.name}}</a>
         <div id="dark-mode-button" class="cursor-pointer">
             <svg width="24" height="24" fill="currentColor" class="transition-colors duration-200 text-black">
                 <path fill-rule="evenodd" clip-rule="evenodd"

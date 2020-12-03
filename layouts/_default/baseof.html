@@ -17,7 +17,7 @@
     <body class="dark:text-white">
         <div class="container lg:max-w-4xl mx-auto my-10">
             {{ partial "header.html" .}}
-            <div class="content" style="min-height: calc(100vh - 218px);">
+            <div class="content py-10" style="min-height: calc(100vh - 218px);">
                 {{ block "main" . }}
                 {{end}}
             </div>

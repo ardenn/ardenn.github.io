@@ -1,7 +1,10 @@
 ---
-title: "Bjsbbdfjbsdjf sdfsdsfdf"
-date: 2020-12-03T09:58:27+03:00
+title: "Second Article"
+date: 2020-12-03T17:55:17+03:00
 draft: true
+tags:
+- first
+- second
 ---
 
 ## Hello, I'm Rodgers!
