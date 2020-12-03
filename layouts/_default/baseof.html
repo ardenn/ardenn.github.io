@@ -12,9 +12,10 @@
         {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
         {{ end }}
         <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+        <script src="/main.js"></script>
     </head>
 
-    <body class="dark:text-white dark:bg-black transition duration-500 ease-in-out">
+    <body class="dark:text-white dark:bg-black">
         <div class="container lg:max-w-4xl mx-auto my-10">
             {{ partial "header.html" . }}
             <div class="content py-10" style="min-height: calc(100vh - 218px);">
