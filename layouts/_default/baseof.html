@@ -14,11 +14,13 @@
         <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
     </head>
 
-    <body>
-        <div class="container lg:max-w-5xl mx-auto my-10">
+    <body class="dark:text-white">
+        <div class="container lg:max-w-4xl mx-auto my-10">
             {{ partial "header.html" .}}
-            {{ block "main" . }}
-            {{end}}
+            <div class="content" style="min-height: calc(100vh - 218px);">
+                {{ block "main" . }}
+                {{end}}
+            </div>
             {{ partial "footer.html" .}}
         </div>
     </body>
