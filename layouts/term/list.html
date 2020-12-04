@@ -1,5 +1,5 @@
 {{define "main" }}
-{{ partial "heading.html" (dict "Link" "" "LinkText" "See all" "Heading" .Title) }}
+{{ partial "heading.html" (dict "Link" .Parent.Permalink "LinkText" "See all" "Heading" (.Title|title)) }}
 {{ $paginator := .Paginate (where .RegularPages "Section" "blog") }}
 {{ partial "item-list.html" $paginator.Pages }}
 {{ partial "paginator.html" $paginator}}

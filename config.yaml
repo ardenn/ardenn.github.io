@@ -6,3 +6,4 @@ params:
 build:
   writeStats: true
   useResourceCacheWhen: fallback
+paginate: 5

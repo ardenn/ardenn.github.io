@@ -7,6 +7,7 @@ tags:
 - second
 categories:
 - Programming
+- Photography
 ---
 
 ## Hello, I'm Rodgers!

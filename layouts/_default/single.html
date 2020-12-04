@@ -12,8 +12,7 @@
 </article>
 <div class="pt-10 space-x-2 flex justify-start">
     {{ range (.GetTerms "tags") }}
-    <span class="text-gray-500 bg-gray-100 py-2 px-3 text-sm rounded-md dark:bg-gray-800"><a class="mx-auto"
-            href="{{ .Permalink }}">{{.LinkTitle}}</a></span>
+    {{ partial "taxonomy.html" (dict "Link" .Permalink "LinkText" .LinkTitle ) }}
     {{ end }}
 </div>
 {{end}}
