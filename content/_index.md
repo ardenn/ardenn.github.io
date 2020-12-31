@@ -1,7 +1,7 @@
 ---
 title: "Home"
 date: 2020-12-03T16:32:23+03:00
-draft: true
+draft: false
 ---
 ## Hello, I'm Rodgers!
 

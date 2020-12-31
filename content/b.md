@@ -1,7 +1,7 @@
 ---
 title: "Bjsbbdfjbsdjf sdfsdsfdf"
 date: 2020-12-03T09:58:27+03:00
-draft: true
+draft: false
 ---
 
 ## Hello, I'm Rodgers!

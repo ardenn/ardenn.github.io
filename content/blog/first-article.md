@@ -1,7 +1,7 @@
 ---
 title: "First Article"
 date: 2020-12-03T17:55:11+03:00
-draft: true
+draft: false
 tags:
 - dynamic
 - test

@@ -1,7 +1,7 @@
 ---
 title: "Second Article"
 date: 2020-12-03T17:55:17+03:00
-draft: true
+draft: false
 tags:
 - first
 - second
