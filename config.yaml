@@ -7,3 +7,4 @@ build:
   writeStats: true
   useResourceCacheWhen: fallback
 paginate: 5
+theme: hugo-persona
