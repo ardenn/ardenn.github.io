@@ -1,3 +1,3 @@
 [submodule "themes/hugo-persona"]
 	path = themes/hugo-persona
-	url = git@github.com:ardenn/hugo-persona.git
+	url = https://github.com/ardenn/hugo-persona.git
