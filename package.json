@@ -1,8 +1,9 @@
 {
   "devDependencies": {
+    "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.0.4",
     "postcss": "^8.1.13",
     "tailwindcss": "^2.0.1",
-    "@tailwindcss/typography": "^0.3.1"
+    "postcss-cli": "^8.3.1"
   }
 }
