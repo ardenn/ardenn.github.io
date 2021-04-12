@@ -1,4 +1,4 @@
-baseURL: https://hugo-persona.netlify.app/
+baseURL: /
 languageCode: en-us
 title: Rodgers Ouma | First of his name
 params:
