@@ -5,7 +5,7 @@ draft: false
 ---
 ## Hello, I'm Rodgers!
 
-I am a Software Engineer from ~~Homabay~~ Nairobi, Kenya 🇰🇪. I love using, designing and building software. I often use Python, Golang and Dart for my projects, but also a lil' bit of everything (as dictated by the job at hand) every now and then. I like to learn new stuff, especially in the tech scene. I'm fascinated by Tech, and software in particular.
+I am a Software Engineer from ~~Homabay~~ Nairobi, Kenya 🇰🇪. I love using, designing and building software. I often use Python, Golang and Dart for my projects, but also a lil' bit of everything (as dictated by the job at hand). I like to learn new stuff, especially in the tech scene. I'm fascinated by Tech, and software in particular.
 
 I have extensive experience with back-end web system design and architecture (microservices et al). I am also experienced in general scripting, front-end web and mobile (mainly Dart/Flutter and JS).
 
