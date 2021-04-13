@@ -3,9 +3,10 @@ languageCode: en-us
 title: Rodgers Ouma | First of his name
 params:
   name: "Rodgers Ouma"
+  gtag: G-K0WW8J5FNZ
   description: "I love using, designing and building software"
   title: "Rodgers Ouma - The first of his name"
-  keywords: rodgers ouma mc'alila,twiga foods,rodgers,ouma,mc_alila,mcalila ,personal website,python,kenya,ironman,maseno school,jkuat,software,software developer,actuarial science,ouma rodgers,alila,rodgers ouma,mest africa,homa bay,software engineering kenya,django,python kenya,angular,software,build app,mobile app
+  keywords: "rodgers ouma mc'alila,twiga foods,rodgers,ouma,mc_alila,mcalila ,personal website,python,kenya,ironman,maseno school,jkuat,software,software developer,actuarial science,ouma rodgers,alila,rodgers ouma,mest africa,homa bay,software engineering kenya,django,python kenya,angular,software,build app,mobile app"
 build:
   writeStats: true
   useResourceCacheWhen: fallback
