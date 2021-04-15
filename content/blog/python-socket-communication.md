@@ -11,6 +11,7 @@ tags:
     - Network
 ---
 
+_This article was originally posted on [Python Pandemonium](https://medium.com/python-pandemonium/python-socket-communication-e10b39225a4c)_
 
 ## What is a socket?
 
