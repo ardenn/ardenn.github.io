@@ -12,6 +12,7 @@ tags:
     - Jupyter
 ---
 
+_This article was originally posted on [Medium](https://medium.com/@mc_alila/python-data-analysis-getting-started-a2514facfdfe)_
 
 It has been just over a week since Ubuntu [18.04 LTS](https://www.omgubuntu.co.uk/2018/04/ubuntu-18-04-download-release-features) was released, and if you are like me, you’ll always prefer to do a clean install rather than an upgrade. I use Ubuntu on my primary development machine, so clean installs generally mean setting up a new development environment. I initially struggled with setting up my Data Analysis environment on my old system, and thought of documenting the procedure this time round, at least for my sake. I hope this helps out someone like me, when getting started.
 

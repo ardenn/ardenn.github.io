@@ -9,6 +9,8 @@ tags:
     - JSON
 ---
 
+_This article was originally posted on [Python Pandemonium](https://medium.com/python-pandemonium/python-dictionaries-45cacc2b76aa)_
+
 
 Data structures are basically containers that store data in predefined layouts, optimized for certain operations — like apples in a box, ready for picking😉.
 

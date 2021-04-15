@@ -9,6 +9,7 @@ tags:
     - Friendship
 ---
 
+_This article was originally posted on [Medium](https://medium.com/@mc_alila/https-medium-com-mc-alila-thank-you-my-friend-8f2b400e2181)_
 
 A friend of mine recently reminded me to “[find time to reflect on your day, week, month and year](https://medium.com/@mwitiderrick/quarter-life-lessons-67659927fd0f)”. It immediately struck me that I had been so focused on gaining ground, that I hadn’t even stopped to look back and appreciate how far I have come. So I paused for a minute and looked back (I heard someone say “Forward ever, backward never”, so you might not want to do any of this). Turns out I have had some really awesome friends, and I just want to appreciate you all.
 

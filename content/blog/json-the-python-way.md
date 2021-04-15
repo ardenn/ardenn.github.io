@@ -10,7 +10,7 @@ tags:
     - Data
 ---
 
-
+_This article was originally posted on [Python Pandemonium](https://medium.com/python-pandemonium/json-the-python-way-91aac95d4041)_
 ## What is JSON?
 
 [JavaScript Object Notation (JSON)](http://www.json.org/) is a lightweight data-interchange format based on the syntax of JavaScript objects. It is a text-based, human-readable, language-independent format for representing structured object data for easy transmission or saving. JSON objects can also be stored in files — typically a text file with a .json extension and a application/json MIME type. Commonly, JSON is used for two way data transmission between a web-server and a client in a REST API.
