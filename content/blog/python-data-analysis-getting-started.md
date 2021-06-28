@@ -86,8 +86,6 @@ Having set up the basic requirements for the development environment, I’ll go 
 
     $ jupyter lab
 
-<iframe src="https://medium.com/media/6a82b73679835fbcd3c09d052c279783" frameborder=0></iframe>
-
 Now we can build the future, one dataset at a time!
 
 Thank you.
