@@ -43,9 +43,9 @@ By default, the JSON encoder only understands native Python data types (str, int
 
 ![Python — JSON conversion](https://cdn-images-1.medium.com/max/2000/1*PA8yUhgId2jyIrJULvNbvw.png)
 
-* dumps() — to serialize an object to a JSON formatted string.
+* `dumps()` — to serialize an object to a JSON formatted string.
 
-* dump() — to serialize an object to a JSON formatted stream ( which supports writing to a file).
+* `dump()` — to serialize an object to a JSON formatted stream ( which supports writing to a file).
 
 Lets look at an example of how to use json.dumps() to serialize built in data types.
 
@@ -104,9 +104,9 @@ As in the case of serialization, the decoder converts JSON encoded data into nat
 
 The json module exposes two other methods for deserialization.
 
-* loads() — to deserialize a JSON document to a Python object.
+* `loads()` — to deserialize a JSON document to a Python object.
 
-* load() — to deserialize a JSON formatted stream ( which supports reading from a file) to a Python object.
+* `load()` — to deserialize a JSON formatted stream ( which supports reading from a file) to a Python object.
 
 ```
     >>> import json
@@ -136,7 +136,7 @@ And the output:
      'other_names': ['Doe', 'Joe'],
      'spouse': None}
 
-Here we passed a JSON string to the json.loads() method, and got a dictionary as the output.
+Here we passed a JSON string to the `json.loads()` method, and got a dictionary as the output.
 To demonstrate how json.load() works, we could read from the user.json file that we created during serialization in the previous section.
 
     >>> import json
@@ -154,7 +154,24 @@ So far we’ve only worked with built-in data types. However, in real world appl
 
 In this section, we are going to define a custom User class, proceed to create an instance and attempt to serialize this instance, as we did with the built in types.
 
- <iframe src="https://medium.com/media/b36f425ea3ebbb990f64b75c71273e61" frameborder=0></iframe>
+ ```python
+
+class User:
+   """
+   Custom User Class
+   """
+    def __init__(self,name,age,active,balance,other_names,friends,spouse):
+        self.name = name
+        self.age = age
+        self.active = active
+        self.balance = balance
+        self.other_names = other_names
+        self.friends = friends
+        self.spouse = spouse
+        
+    def __str__(self):
+        return self.name
+ ```
 
     >>> from json_user import User
     >>> new_user = User(
@@ -177,9 +194,27 @@ We need to send our user data to a client over anetwork, so how do we get oursel
 
 A simple solution would be to convert our custom type in to a serializable type — i.e a built-in type. We can conveniently define a method convert_to_dict() that returns a dictionary representation of our object. json.dumps() takes in a optional argument, default , which specifies a function to be called if the object is not serializable. This function returns a JSON encodable version of the object.
 
- <iframe src="https://medium.com/media/67812425e27bfb86a8f2218ef9c2c141" frameborder=0></iframe>
+```python
+def convert_to_dict(obj):
+  """
+  A function takes in a custom object and returns a dictionary representation of the object.
+  This dict representation includes meta data such as the object's module and class names.
+  """
+  
+  #  Populate the dictionary with object meta data 
+  obj_dict = {
+    "__class__": obj.__class__.__name__,
+    "__module__": obj.__module__
+  }
+  
+  #  Populate the dictionary with object properties
+  obj_dict.update(obj.__dict__)
+  
+  return obj_dict
+view raw
+```
 
-Lets go through what convert_to_dict does:
+Lets go through what `convert_to_dict` does:
 
 * The function takes in an object as the only argument.
 
@@ -191,7 +226,7 @@ Lets go through what convert_to_dict does:
 
 * The resulting dict is now serializable.
 
-At this point we can comfortably call json.dumps() on the object and pass in default = convert_to_dict .
+At this point we can comfortably call `json.dumps()` on the object and pass in `default = convert_to_dict` .
 
     >>> from json_convert_to_dict import convert_to_dict
     >>> data = json.dumps(new_user,default=convert_to_dict,indent=4, sort_keys=True)
@@ -219,7 +254,7 @@ Hooray! And we get ourselves a nice little JSON object.
 
 ### Decoding Custom Objects
 
-At this point, we have a JSON string with data about a custom object that json.loads() doesn’t know about. Passing this string to json.loads()
+At this point, we have a JSON string with data about a custom object that `json.loads()` doesn’t know about. Passing this string to `json.loads()`
 will give us a dictionary as output, as per the conversion table above.
 
     >>> import json
@@ -241,11 +276,39 @@ As expected, user_data is of type dict .
      'friends': ['Jane', 'John'],
      'spouse': None}
 
-However, we need json.loads() to reconstruct a User object from this dictionary. Accordingly, json.loads() takes in an optional argument object_hook which specifies a function that returns the desired custom object, given the decoded output (which in this case is a dict). We shall now go ahead and define a dict_to_obj function that returns a User object.
+However, we need `json.loads()` to reconstruct a User object from this dictionary. Accordingly, `json.loads()` takes in an optional argument object_hook which specifies a function that returns the desired custom object, given the decoded output (which in this case is a dict). We shall now go ahead and define a dict_to_obj function that returns a User object.
 
- <iframe src="https://medium.com/media/789338d9f0cd054819f4d3200a5348fc" frameborder=0></iframe>
+```python
 
-This is what dict_to_obj does:
+def dict_to_obj(our_dict):
+    """
+    Function that takes in a dict and returns a custom object associated with the dict.
+    This function makes use of the "__module__" and "__class__" metadata in the dictionary
+    to know which object type to create.
+    """
+    if "__class__" in our_dict:
+        # Pop ensures we remove metadata from the dict to leave only the instance arguments
+        class_name = our_dict.pop("__class__")
+        
+        # Get the module name from the dict and import it
+        module_name = our_dict.pop("__module__")
+        
+        # We use the built in __import__ function since the module name is not yet known at runtime
+        module = __import__(module_name)
+        
+        # Get the class from the module
+        class_ = getattr(module,class_name)
+        
+        # Use dictionary unpacking to initialize the object
+        obj = class_(**our_dict)
+    else:
+        obj = our_dict
+    return obj
+    
+view rawjson_dict_to_obj.py hosted with ❤ by GitHub
+```
+
+This is what `dict_to_obj` does:
 
 * Take in a dictionary, our_dict , obtained from decoding a JSON object. The dictionary should have special keys __class__ and __module__ that tell us what type of object we should create.
 
@@ -257,9 +320,9 @@ This is what dict_to_obj does:
 
 * From the imported module, we can get the class, which is one of the module’s attributes.
 
-* Finally instantiate a member of the class, by supplying the class constructor with instance arguments through dictionary unpacking of whatever is left of our_dict .
+* Finally instantiate a member of the class, by supplying the class constructor with instance arguments through dictionary unpacking of whatever is left of `our_dict`.
 
-Now let’s go ahead and confidently call json.loads with the argument object_hook = dict_to_obj .
+Now let’s go ahead and confidently call `json.loads` with the argument `object_hook = dict_to_obj` .
 
     >>> from json_dict_to_obj import dict_to_obj
     >>> new_object = json.loads('{"__class__": "User", "__module__": "__main__", "name": "Foo Bar", "age": 78, "active": true, "balance": 345.8, "other_names": ["Doe", "Joe"], "friends": ["Jane", "John"], "spouse": null}',object_hook=dict_to_obj)

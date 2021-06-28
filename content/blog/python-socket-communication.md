@@ -94,7 +94,7 @@ To set up a server, it must perform the sequence of methods socket(), bind(), li
 
 * close() marks the socket as closed and can no longer accept connections.
 
-```
+```python
 import socket
 
 # Create a TCP/IP socket
@@ -151,7 +151,7 @@ Unlike a server, a client only needs to execute the sequence of socket() and con
 
 * connect() connects the socket to an address.
 
-```
+```python
 import socket
 
 # Create a TCP/IP socket
@@ -242,7 +242,7 @@ Here, we’ll only execute the socket() and bind() sequence since, there isn’t
 
 * sendto(bytes,address) sends data(given by bytes) to a socket bound to the address as defined by address .
 
-```
+```python
 import socket
 
 # Create a UDP socket
@@ -280,7 +280,7 @@ In the example above:
 
 This client is similar to the server above, only that it doesn’t bind the socket to any address. Instead, the it uses sendto() to send messages to the server’s address.
 
-```
+```python
 import socket
 
 # Create a UDP socket
@@ -343,7 +343,8 @@ These are largely similar to TCP sockets with basically two exceptions:
 To implement a similar client-server communication setup with UDS, we would need to slightly modify the example of TCP above.
 
 ### Echo Server
-```
+
+```python
 import socket
 import os
 
@@ -396,7 +397,7 @@ Since we also need to make sure the node doesn’t already exist when starting t
 
 ### Echo Client
 
-```
+```python
 import socket
 import sys
 
@@ -495,7 +496,7 @@ Multicast messages are sent using UDP, since TCP assumes a pair of communicating
 To send messages we use an ordinary sento() method with a multicast group as the address. Moreover, we also need to specify a Time To Live(TTL) value which determines how far the messages should be broadcast from the sender. The default TTL of 1, will result in messages being sent only to hosts within the local network. We shall use setsockopt() with the IP_MULTICAST_TTL option to set the TTL, which should be packed into a single byte.
 We shall also set a timeout value on the socket, to prevent it from waiting indefinitely for responses, since we have no idea how many responses we expect to get from the network.
 
-```
+```python
 import socket
 import struct
 
@@ -552,7 +553,41 @@ In this example:
 
 To receive messages, after creating our ordinary socket and binding it to a port, we would need to add it to the multicast group. This can be done by using the setsockopts() to set the IP_ADD_MEMBERSHIP option, which should be packed into an 8-byte representation of the multicast group, and the network interface on which the server should listen for connections. We shall use socket.inet_aton() to convert the multicast group IPv4 address from dotted-quad string format (‘224.10.10.10’) to 32-bit packed binary format.
 
- <iframe src="https://medium.com/media/45774f5a7d1856ceda6c4d955a245e3a" frameborder=0></iframe>
+```python
+import socket
+import struct
+import sys
+
+multicast_group = '224.10.10.10'
+server_address = ('', 10000)
+
+# Create the socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+# Bind to the server address
+sock.bind(server_address)
+
+# Tell the operating system to add the socket to
+# the multicast group on all interfaces.
+group = socket.inet_aton(multicast_group)
+mreq = struct.pack('4sL', group, socket.INADDR_ANY)
+sock.setsockopt(
+    socket.IPPROTO_IP,
+    socket.IP_ADD_MEMBERSHIP,
+    mreq)
+
+# Receive/respond loop
+while True:
+    print('\nwaiting to receive message')
+    data, address = sock.recvfrom(1024)
+
+    print('received {} bytes from {}'.format(
+        len(data), address))
+    print(data)
+
+    print('sending acknowledgement to', address)
+    sock.sendto(b'ack', address)
+```
 
 In this example:
 
@@ -588,7 +623,30 @@ So far we have been transmitting streams of text data encoded as bytes through o
 
 We shall now implement a binary client that sends an integer, a string and a floating point number by packaging the data into a series of bytes.
 
- <iframe src="https://medium.com/media/4ea6f1b5a4ee9c2f42734b7a5f46ceb8" frameborder=0></iframe>
+```python
+import binascii
+import socket
+import struct
+
+# Create a TCP/IP socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_address = ('localhost', 10000)
+sock.connect(server_address)
+
+values = (1, b'ab', 2.7)
+packer = struct.Struct('I 2s f')
+packed_data = packer.pack(*values)
+
+print('values =', values)
+
+try:
+    # Send data
+    print('sending {!r}'.format(binascii.hexlify(packed_data)))
+    sock.sendall(packed_data)
+finally:
+    print('closing socket')
+    sock.close()
+```
 
 Here we set up a socket of type socket.SOCK_STREAM and connect it to our server address. We then use a struct.Struct('I 2s f') specifier to pack the data before sending with sendall().
 
@@ -596,7 +654,32 @@ Here we set up a socket of type socket.SOCK_STREAM and connect it to our server 
 
 On the other hand we have a server, that listens on the server address for incoming connections. After accepting a connection and receiving data we then proceed to unpack the data using a struct.Struct('I 2s f') specifier. Note that we use the same specifier on both ends of the communication so that the received bytes are interpreted in the same order they were packed.
 
- <iframe src="https://medium.com/media/8ce5f2bf10de43b7e5b4a37b5afbe44f" frameborder=0></iframe>
+```python
+import binascii
+import socket
+import struct
+
+# Create a TCP/IP socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_address = ('localhost', 10000)
+sock.bind(server_address)
+sock.listen(1)
+
+unpacker = struct.Struct('I 2s f')
+
+while True:
+    print('\nwaiting for a connection')
+    connection, client_address = sock.accept()
+    try:
+        data = connection.recv(unpacker.size)
+        print('received {!r}'.format(binascii.hexlify(data)))
+
+        unpacked_data = unpacker.unpack(data)
+        print('unpacked:', unpacked_data)
+
+    finally:
+        connection.close()
+```
 
 The output we get from the client:
 

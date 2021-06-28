@@ -12,3 +12,7 @@ build:
   useResourceCacheWhen: fallback
 paginate: 5
 theme: hugo-persona
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
