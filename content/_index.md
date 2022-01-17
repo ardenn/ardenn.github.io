@@ -1,6 +1,6 @@
 ---
 title: "Home"
-date: 2021-04-12T12:32:23+03:00
+date: 2022-01-17T14:39:23+03:00
 draft: false
 ---
 ## Hello, I'm Rodgers!
@@ -9,6 +9,6 @@ A Software Engineer from ~~Homabay~~ Nairobi, Kenya 🇰🇪. I love using, desi
 
 During my spare time, I read code on Github, to see what everyone else is doing, and how they're doing it.
 I don't write much but I periodically get inspired by [@derrick](https://www.linkedin.com/in/mwitiderrick).
-I also like to jump on a bike (read bicyle 😅), when not catching up on my watchlist.
+I also like to go on bike (read bicyle 😅) rides, when not catching up on my watchlist.
 
-For projects, drop me an email at **m<span style="display:none;">SPAM PROTECT</span>e@maka<span style="display:none;">SPAM PROTECT</span>lila.dev** or shoot me a Telegram [@mc_alila](https://t.me/mc_alila). You can also find me on Twitter [@mc_alila](https://twitter.com/mc_alila).
+For projects, drop me an email at **m<span style="display:none;">SPAM PROTECT</span>e@maka<span style="display:none;">SPAM PROTECT</span>lila.dev** or shoot me a Telegram [@makalila](https://t.me/makalila). You can also find me on Twitter [@mc_alila](https://twitter.com/mc_alila).
