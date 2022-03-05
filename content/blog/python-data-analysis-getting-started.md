@@ -30,18 +30,21 @@ Here is a quick roundup of the basic libraries we’ll need to get set up:
 
 This is a tool to create isolated Python environments. I use virtual environments for all my python projects, to basically keep dependencies and versions consistent, and independent on a per-project basis. If you need to install it, use the command sudo pip3 install virtualenv. With virtualenv installed, we can then proceed to create a project directory, and a virtual environment.
 
-    $ mkdir data_science && cd data_science
-    $ virtualenv .env -p python3
-    $ source .env/bin/activate
-
+```shell
+$ mkdir data_science && cd data_science
+$ virtualenv .env -p python3
+$ source .env/bin/activate
+```
 ## Computation libraries
 
 **Jupyter notebook and/or Jupyter Lab**
 
 Jupyter notebook is an application that allows you to write python code in an interactive environment. Jupyter lab is the next-generation user interface for jupyter’s computing environment. i.e a ‘revamped jupyter notebook’. In my case, I will install both of them, in the virtual environment we just activated above.
 
-    $ pip install notebook
-    $ pip install jupyterlab
+```shell
+$ pip install notebook
+$ pip install jupyterlab
+```
 
 **Numpy**
 
@@ -61,8 +64,9 @@ Numpy is a library for scientific computing in python, famously known for its po
 
 1. Nose — a unit testing framework for python. It provides project-level functions to simplify testing for projects. Nose developers recommend using [nose2](https://github.com/nose-devs/nose2), a successor to nose, based on python’s inbuilt [unittest2](https://pypi.org/project/unittest2/) module.
 
-    $ pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
-
+```shell
+$ pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
+```
 ## Visualisation Libraries
 
 Visualization is a necessity for data processing. It gives life and meaning to all the complex operations that go in to data wrangling and transformation. Its the language that people understand. Python has a variety of tools that can achieve this goal.
@@ -71,21 +75,25 @@ Visualization is a necessity for data processing. It gives life and meaning to a
 
 Seaborn is quite popular for making aesthetically and statistically pleasing graphs and charts. It is relatively easier to use than matplolib (which is largely the underlying component behind seaborn). Seaborn also provides great graphic details that allow for pattern identification, and trend analysis among other benefits. To install seaborn:
 
-    $ pip install seaborn
-
+```shell
+$ pip install seaborn
+```
 **Plotly**
 
 Plotly, aptly named after its online platform [plot.ly](https://plot.ly) is another great tool for visualization in python. It allows one to create interactive, publication-quality graphs online. A major difference between plotly and seaborn, or matplotlib is the ability to make interactive and responsive plots, making it suitable for web publishing. To use plotly offline, we will need to install an additional library, **cufflinks**, which binds the flexibility of plotly to pandas dataframes.
 
-    $ pip install plotly
-    $ pip install cufflinks
+```shell
+$ pip install plotly
+$ pip install cufflinks
+```
 
 ## Clean Up and Start Up
 
 Having set up the basic requirements for the development environment, I’ll go ahead and start jupyter lab, spin up a new notebook, and see how/ if everything works.
 
-    $ jupyter lab
-
+```shell
+$ jupyter lab
+```
 Now we can build the future, one dataset at a time!
 
 Thank you.

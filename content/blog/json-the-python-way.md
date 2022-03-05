@@ -49,19 +49,22 @@ By default, the JSON encoder only understands native Python data types (str, int
 
 Lets look at an example of how to use json.dumps() to serialize built in data types.
 
-    >>> import json
-    >>> json.dumps({
-            "name": "Foo Bar",
-            "age": 78,
-            "friends": ["Jane","John"],
-            "balance": 345.80,
-            "other_names":("Doe","Joe"),
-            "active":True,
-            "spouse":None
-        }, sort_keys=**True**, indent=4)
+```python
+>>> import json
+>>> json.dumps({
+        "name": "Foo Bar",
+        "age": 78,
+        "friends": ["Jane","John"],
+        "balance": 345.80,
+        "other_names":("Doe","Joe"),
+        "active":True,
+        "spouse":None
+    }, sort_keys=**True**, indent=4)
+```
 
 And the output:
 
+```json
     {
         "active": true,
         "age": 78,
@@ -77,22 +80,25 @@ And the output:
         ],
         "spouse": null
     }
+```
 
 In the example above we passed a dictionary to the json.dumps() method, with 2 extra arguments which provide pretty printing of JSON string. sort_keys = True tells the encoder to return the JSON object keys in a sorted order, while the indent value allows the output to be formatted nicely, both for easy readability.
 
 Similarly, lets use json.dump() on the same dictionary and write the output stream to a file.
 
-    >>> import json
-    >>> with open('user.json','w') as file:
-             json.dump({
-                "name": "Foo Bar",
-                "age": 78,
-                "friends": ["Jane","John"],
-                "balance": 345.80,
-                "other_names":("Doe","Joe"),
-                "active":True,
-                "spouse":None
-            }, file, sort_keys=**True**, indent=4)
+```python
+>>> import json
+>>> with open('user.json','w') as file:
+            json.dump({
+            "name": "Foo Bar",
+            "age": 78,
+            "friends": ["Jane","John"],
+            "balance": 345.80,
+            "other_names":("Doe","Joe"),
+            "active":True,
+            "spouse":None
+        }, file, sort_keys=**True**, indent=4)
+```
 
 This example writes a user.json file to disk with similar content as in the previous example.
 
@@ -108,26 +114,27 @@ The json module exposes two other methods for deserialization.
 
 * `load()` — to deserialize a JSON formatted stream ( which supports reading from a file) to a Python object.
 
-```
-    >>> import json
-    >>> json.loads('{
-        "active": true,
-        "age": 78,
-        "balance": 345.8,
-        "friends": [
-            "Jane",
-            "John"
-        ],
-        "name": "Foo Bar",
-        "other_names": [
-            "Doe",
-            "Joe"
-        ],
-        "spouse": null
-        }')
+```python
+>>> import json
+>>> json.loads('{
+    "active": true,
+    "age": 78,
+    "balance": 345.8,
+    "friends": [
+        "Jane",
+        "John"
+    ],
+    "name": "Foo Bar",
+    "other_names": [
+        "Doe",
+        "Joe"
+    ],
+    "spouse": null
+    }')
 ```
 And the output:
 
+```python
     {'active': True,
      'age': 78,
      'balance': 345.8,
@@ -135,15 +142,15 @@ And the output:
      'name': 'Foo Bar',
      'other_names': ['Doe', 'Joe'],
      'spouse': None}
-
+```
 Here we passed a JSON string to the `json.loads()` method, and got a dictionary as the output.
 To demonstrate how json.load() works, we could read from the user.json file that we created during serialization in the previous section.
-
-    >>> import json
-    >>> with open('user.json', 'r') as file:
-            user_data = json.load(file)
-    >>> print(user_data)
-
+```python
+>>> import json
+>>> with open('user.json', 'r') as file:
+        user_data = json.load(file)
+>>> print(user_data)
+```
 From this example, we get a dictionary, again, similar to the one in loads() above.
 
 ## Working with Custom Objects
@@ -172,17 +179,18 @@ class User:
     def __str__(self):
         return self.name
  ```
-
-    >>> from json_user import User
-    >>> new_user = User(
-            name = "Foo Bar",
-            age = 78,
-            friends = ["Jane","John"],
-            balance = 345.80,
-            other_names = ("Doe","Joe"),
-            active = True,
-            spouse = None)
-    >>> json.dumps(new_user)
+```python
+>>> from json_user import User
+>>> new_user = User(
+        name = "Foo Bar",
+        age = 78,
+        friends = ["Jane","John"],
+        balance = 345.80,
+        other_names = ("Doe","Joe"),
+        active = True,
+        spouse = None)
+>>> json.dumps(new_user)
+```
 
 And the output:
 
@@ -228,44 +236,45 @@ Lets go through what `convert_to_dict` does:
 
 At this point we can comfortably call `json.dumps()` on the object and pass in `default = convert_to_dict` .
 
-    >>> from json_convert_to_dict import convert_to_dict
-    >>> data = json.dumps(new_user,default=convert_to_dict,indent=4, sort_keys=True)
-    >>> print(data)
+```python
+>>> from json_convert_to_dict import convert_to_dict
+>>> data = json.dumps(new_user,default=convert_to_dict,indent=4, sort_keys=True)
+>>> print(data)
+```
 
 Hooray! And we get ourselves a nice little JSON object.
 
-    {
-        "__class__": "User",
-        "__module__": "__main__",
-        "active": true,
-        "age": 78,
-        "balance": 345.8,
-        "friends": [
-            "Jane",
-            "John"
-        ],
-        "name": "Foo Bar",
-        "other_names": [
-            "Doe",
-            "Joe"
-        ],
-        "spouse": null
-    }
+```json
+{
+    "__class__": "User",
+    "__module__": "__main__",
+    "active": true,
+    "age": 78,
+    "balance": 345.8,
+    "friends": [
+        "Jane",
+        "John"
+    ],
+    "name": "Foo Bar",
+    "other_names": [
+        "Doe",
+        "Joe"
+    ],
+    "spouse": null
+}
+```
 
 ### Decoding Custom Objects
 
 At this point, we have a JSON string with data about a custom object that `json.loads()` doesn’t know about. Passing this string to `json.loads()`
 will give us a dictionary as output, as per the conversion table above.
 
-    >>> import json
-    >>> user_data = json.loads('{"__class__": "User", "__module__": "__main__", "name": "Foo Bar", "age": 78, "active": true, "balance": 345.8, "other_names": ["Doe", "Joe"], "friends": ["Jane", "John"], "spouse": null}')
-    >>> type(user_data)
-    >>> print(user_data)
-
-As expected, user_data is of type dict .
-
+```python
+>>> import json
+>>> user_data = json.loads('{"__class__": "User", "__module__": "__main__", "name": "Foo Bar", "age": 78, "active": true, "balance": 345.8, "other_names": ["Doe", "Joe"], "friends": ["Jane", "John"], "spouse": null}')
+>>> type(user_data)
+>>> print(user_data)
     dict
-
     {'__class__': 'User',
      '__module__': '__main__',
      'name': 'Foo Bar',
@@ -275,7 +284,9 @@ As expected, user_data is of type dict .
      'other_names': ['Doe', 'Joe'],
      'friends': ['Jane', 'John'],
      'spouse': None}
+```
 
+As expected, user_data is of type dict .
 However, we need `json.loads()` to reconstruct a User object from this dictionary. Accordingly, `json.loads()` takes in an optional argument object_hook which specifies a function that returns the desired custom object, given the decoded output (which in this case is a dict). We shall now go ahead and define a dict_to_obj function that returns a User object.
 
 ```python
@@ -324,13 +335,13 @@ This is what `dict_to_obj` does:
 
 Now let’s go ahead and confidently call `json.loads` with the argument `object_hook = dict_to_obj` .
 
-    >>> from json_dict_to_obj import dict_to_obj
-    >>> new_object = json.loads('{"__class__": "User", "__module__": "__main__", "name": "Foo Bar", "age": 78, "active": true, "balance": 345.8, "other_names": ["Doe", "Joe"], "friends": ["Jane", "John"], "spouse": null}',object_hook=dict_to_obj)
-    >>> type(new_object)
-
-Without a doubt, we can confirm that indeed new_object is of type User .
-
+```python
+>>> from json_dict_to_obj import dict_to_obj
+>>> new_object = json.loads('{"__class__": "User", "__module__": "__main__", "name": "Foo Bar", "age": 78, "active": true, "balance": 345.8, "other_names": ["Doe", "Joe"], "friends": ["Jane", "John"], "spouse": null}',object_hook=dict_to_obj)
+>>> type(new_object)
     __main__.User
+```
+Without a doubt, we can confirm that indeed new_object is of type User .
 
 At this stage, we have successfully encoded a custom object to JSON and recreated the same object from our JSON data. I’d say we all deserve a pat on the back, and of course, a drink.
 

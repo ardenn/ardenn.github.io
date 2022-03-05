@@ -33,8 +33,9 @@ Depending on the transport layer protocol used, sockets can either be:
 
 To use sockets in Python we will need to import the socket module.
 
-    >>> import socket
-
+```python
+>>> import socket
+```
 The primary way of using the sockets module is through the sockets() function which returns a socket object with methods to implement various system socket calls. Python sockets supports a number of address families under the network layer protocol, mainly:
 
  1. AF_INET — this is the most common, and uses IPv4 for network addressing. Most of the internet networking is presently done using IPv4.
@@ -48,26 +49,26 @@ The primary way of using the sockets module is through the sockets() function wh
 In this section we will look at some socket functions and methods that provide access to network related tasks.
 
 * gethostname() to get the official name of the current host.
-```
-    >>> import socket
-    >>> print(socket.gethostname())
+```python
+>>> import socket
+>>> print(socket.gethostname())
     rodgers-PC
 ```
 * gethostbyname() converts the name of a server into its numerical address by consulting the operating system’s DNS configuration.
-```
-    >>> import socket
-    >>> print(socket.gethostbyname("google.com"))
+```sh
+>>> import socket
+>>> print(socket.gethostbyname("google.com"))
     216.58.223.78
 ```
 * gethostbyname_ex() to get more naming information about a server.
-```
-    >>> import socket
-    >>> name, aliases, addresses = socket.gethostbyname_ex("google.com")
-    >>> print("Name: ",name)
+```python
+>>> import socket
+>>> name, aliases, addresses = socket.gethostbyname_ex("google.com")
+>>> print("Name: ",name)
     Name:  google.com
-    >>> print("Aliases: ",aliases)
+>>> print("Aliases: ",aliases)
     Aliases:  []
-    >>> print("Addresses: ",addresses)
+>>> print("Addresses: ",addresses)
     Addresses:  ['216.58.223.78']
 ```
 * gethostbyaddr() to perform a reverse lookup for a domain’s name.
@@ -198,37 +199,42 @@ In this example:
 
 Running out server and client scripts on separate terminal windows, this is the output from the server;
 
-    $ python3 echo_server.py                                                                                            Starting up on localhost port 10000
-    waiting for a connection
-    connection from ('127.0.0.1', 49964)
-    received b'This is our mess'
-    sending data back to the client
-    received b'age. It is very '
-    sending data back to the client
-    received b'long but will on'
-    sending data back to the client
-    received b'ly be transmitte'
-    sending data back to the client
-    received b'd in chunks of 1'
-    sending data back to the client
-    received b'6 at a time'
-    sending data back to the client
-    received b''
-    no data from ('127.0.0.1', 49964)
-    Closing current connection
-    waiting for a connection
+```shell
+$ python3 echo_server.py                                                                                            Starting up on localhost port 10000
+waiting for a connection
+connection from ('127.0.0.1', 49964)
+received b'This is our mess'
+sending data back to the client
+received b'age. It is very '
+sending data back to the client
+received b'long but will on'
+sending data back to the client
+received b'ly be transmitte'
+sending data back to the client
+received b'd in chunks of 1'
+sending data back to the client
+received b'6 at a time'
+sending data back to the client
+received b''
+no data from ('127.0.0.1', 49964)
+Closing current connection
+waiting for a connection
+```
 
 And the client;
 
-    $ python3 echo_client.py                                                                                             connecting to localhost port 10000
-    sending b'This is our message. It is very long but will only be transmitted in chunks of 16 at a time'
-    received b'This is our mess'
-    received b'age. It is very '
-    received b'long but will on'
-    received b'ly be transmitte'
-    received b'd in chunks of 1'
-    received b'6 at a time'
-    closing socket
+```shell
+$ python3 echo_client.py
+connecting to localhost port 10000
+sending b'This is our message. It is very long but will only be transmitted in chunks of 16 at a time'
+received b'This is our mess'
+received b'age. It is very '
+received b'long but will on'
+received b'ly be transmitte'
+received b'd in chunks of 1'
+received b'6 at a time'
+closing socket
+```
 
 ## UDP client-server communication
 
@@ -316,21 +322,25 @@ In the script:
 
 This is the output when the client and server scripts are run on the server:
 
-    $ python3 echo_server_udp.py                                                                                         starting up on localhost port 10000
-
-    waiting to receive message
-    received 48 bytes from ('127.0.0.1', 34351)
-    b'This is our message. It will be sent all at once'
-    sent 48 bytes back to ('127.0.0.1', 34351)
-
-    waiting to receive message
+```shell
+$ python3 echo_server_udp.py
+starting up on localhost port 10000
+waiting to receive message
+received 48 bytes from ('127.0.0.1', 34351)
+b'This is our message. It will be sent all at once'
+sent 48 bytes back to ('127.0.0.1', 34351)
+waiting to receive message
+```
 
 And the client:
 
-    $ python3 echo_client_udp.py                                                                                         sending b'This is our message. It will be sent all at once'
-    waiting to receive
-    received b'This is our message. It will be sent all at once'
-    closing socket
+```shell
+$ python3 echo_client_udp.py
+sending b'This is our message. It will be sent all at once'
+waiting to receive
+received b'This is our message. It will be sent all at once'
+closing socket
+```
 
 ## Unix Domain Sockets
 
@@ -439,49 +449,57 @@ In this case, we also replace the server_address variable to the file path that 
 
 Running the client and server results in an output almost similar to the TCP case. For the server we get:
 
-    $ python3 echo_server_uds.py                                                                                         Starting up on ./socket_file
-    waiting for a connection
-    connection from 
-    received b'This is our mess'
-    sending data back to the client
-    received b'age. It is very '
-    sending data back to the client
-    received b'long but will on'
-    sending data back to the client
-    received b'ly be transmitte'
-    sending data back to the client
-    received b'd in chunks of 1'
-    sending data back to the client
-    received b'6 at a time'
-    sending data back to the client
-    received b''
-    no data from 
-    Closing current connection
-    waiting for a connection
+```shell
+$ python3 echo_server_uds.py
+Starting up on ./socket_file
+waiting for a connection
+connection from 
+received b'This is our mess'
+sending data back to the client
+received b'age. It is very '
+sending data back to the client
+received b'long but will on'
+sending data back to the client
+received b'ly be transmitte'
+sending data back to the client
+received b'd in chunks of 1'
+sending data back to the client
+received b'6 at a time'
+sending data back to the client
+received b''
+no data from 
+Closing current connection
+waiting for a connection
+```
 
 And the client:
 
-    $ python3 echo_client.uds.py                                                                                         connecting to ./socket_file
-    sending b'This is our message. It is very long but will only be transmitted in chunks of 16 at a time'
-    received b'This is our mess'
-    received b'age. It is very '
-    received b'long but will on'
-    received b'ly be transmitte'
-    received b'd in chunks of 1'
-    received b'6 at a time'
-    closing socket
+```shell
+$ python3 echo_client.uds.py
+connecting to ./socket_file
+sending b'This is our message. It is very long but will only be transmitted in chunks of 16 at a time'
+received b'This is our mess'
+received b'age. It is very '
+received b'long but will on'
+received b'ly be transmitte'
+received b'd in chunks of 1'
+received b'6 at a time'
+closing socket
+```
 
 ### Permissions
 
 Since UDS sockets are represented by nodes on the the file system, this implies that standard file system permissions can be used to control access to the server. For instance, lets try to change the ownership of the existing node to a root user.
 
-    $ ls -la ./socket_file
-    srwxr-xr-x 1 rodgers rodgers 0 Nov  1 15:24 ./socket_file
-    $ sudo chown root ./socket_file
-    $ ls -la ./socket_file                                                                                               srwxr-xr-x 1 root rodgers 0 Nov  1 15:24 ./socket_file
-    $ python3 echo_client.uds.py
-    connecting to ./socket_file
-    [Errno 13] Permission denied
+```shell
+$ ls -la ./socket_file
+srwxr-xr-x 1 rodgers rodgers 0 Nov  1 15:24 ./socket_file
+$ sudo chown root ./socket_file
+$ ls -la ./socket_file                                                                                               srwxr-xr-x 1 root rodgers 0 Nov  1 15:24 ./socket_file
+$ python3 echo_client.uds.py
+connecting to ./socket_file
+[Errno 13] Permission denied
+```
 
 As we can see, connecting to the server as a regular user fails, meaning only a user with the correct permissions (in this case the root user), can access the server.
 
@@ -597,23 +615,28 @@ In this example:
 
 On running both scripts, on different hosts (A and B), this is the output of the multicast sender on Host A:
 
-    [A]$ python3 multicast_sender.py                                                                                        sending b'very important data'
-    waiting to receive
-    received b'ack' from ('192.168.100.2', 10000)
-    waiting to receive
-    received b'ack' from ('192.168.100.13', 10000)
-    waiting to receive
-    timed out, no more responses
-    closing socket
+```shell
+[A]$ python3 multicast_sender.py
+sending b'very important data'
+waiting to receive
+received b'ack' from ('192.168.100.2', 10000)
+waiting to receive
+received b'ack' from ('192.168.100.13', 10000)
+waiting to receive
+timed out, no more responses
+closing socket
+```
 
 And receiver on Host B:
 
-    [B]$ python3 multicast_receiver.py                                                                                      waiting to receive message
-    received 19 bytes from ('192.168.100.2', 48290)
-    b'very important data'
-    sending acknowledgement to ('192.168.100.2', 48290)
-
-    waiting to receive message
+```shell
+[B]$ python3 multicast_receiver.py
+waiting to receive message
+received 19 bytes from ('192.168.100.2', 48290)
+b'very important data'
+sending acknowledgement to ('192.168.100.2', 48290)
+waiting to receive message
+```
 
 ## Sending Binary Data
 
@@ -683,17 +706,22 @@ while True:
 
 The output we get from the client:
 
-    $ python3 binary_client.py                                                                                           values = (1, b'ab', 2.7)
-    sending b'0100000061620000cdcc2c40'
-    closing socket
+```shell
+$ python3 binary_client.py
+values = (1, b'ab', 2.7)
+sending b'0100000061620000cdcc2c40'
+closing socket
+```
 
 And the server:
 
-    $ python3 binary_serverr.py                                                                     waiting for a connection
-    received b'0100000061620000cdcc2c40'
-    unpacked: (1, b'ab', 2.700000047683716)
-
-    waiting for a connection
+```shell
+$ python3 binary_serverr.py
+waiting for a connection
+received b'0100000061620000cdcc2c40'
+unpacked: (1, b'ab', 2.700000047683716)
+waiting for a connection
+```
 
 From the server output, the floating point numbers loses some precision as a result of packing and unpacking. Otherwise everything else is transmitted as is.
 
@@ -714,24 +742,26 @@ However, sometimes it could be configuration troubles on the client, server, or 
 * ping — works directly with the TCP/IP stack, independent of any other application running on a host, to determine the status of the host, whether it’s up or not. ping works by sending [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) echo request packets to the target host and waiting for an ICMP echo reply.
 Below is an example of ping running on Ubuntu:
 
-```
-    $ ping -c 4 127.0.0.1                                                                                                PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
-    64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.055 ms
-    64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.067 ms
-    64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.077 ms
-    64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.067 ms
+```shell
+$ ping -c 4 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.055 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.067 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.077 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.067 ms
 
-    --- 127.0.0.1 ping statistics ---
-    4 packets transmitted, 4 received, 0% packet loss, time 3057ms
-    rtt min/avg/max/mdev = 0.055/0.066/0.077/0.011 ms
+--- 127.0.0.1 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3057ms
+rtt min/avg/max/mdev = 0.055/0.066/0.077/0.011 ms
 ```
 * netstat —gives information sockets and their current states. Let’s fire up the TCP echo server and observe the output of netstat . From this we can tell that our server is presently using thetcp protocol, listening (state of LISTEN) on port 10000 and host 127.0.0.1 .
 
-```
-    $ netstat -an                                                                                                        Active Internet connections (servers and established)
-    Proto Recv-Q Send-Q Local Address     Foreign Address         State tcp        0      0 127.0.0.1:3306    0.0.0.0:*               LISTEN
-    tcp        0      0 127.0.0.1:10000   0.0.0.0:*               LISTEN
-    tcp        0      0 127.0.0.53:53     0.0.0.0:*               LISTEN
+```shell
+$ netstat -an
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address     Foreign Address         State tcp        0      0 127.0.0.1:3306    0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.1:10000   0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.53:53     0.0.0.0:*               LISTEN
 ```
 ## Conclusion
 

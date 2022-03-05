@@ -26,8 +26,9 @@ An object is said to be hashable if it has a hash value (implemented by a __hash
 
 A dictionary’s data is always enclosed by a pair of curly braces { }, and would normally look like this:
 
+```python
     my_dict = {"first_name": "John", "last_name":"Snow", "age":16, "gender":"Male"}
-
+```
 We have created a dictionary named my_dict where each key-value pair is separated by a full colon, with the key-value pairs as:
 
 * first_name - John
@@ -60,13 +61,14 @@ Unlike sequenced data types like lists and tuples, where indexing is achieved us
 
 * We initialize an empty dictionary using a pair of curly braces. This approach is often used when we expect to store some data at later stages of our operation.
 
+```python
     empty_dict = {}
-
+```
 In the line above, we have created an empty dictionary named empty_dict.
 
 * For instances when we have our data beforehand, we use curly braces with the key-value pairs. We can now create a dictionary to represent the second row of data in the jobs.csv file.
 
-```
+```python
     >>> job1 = {"title":"Production Manager",
         "location":"Rest of Kenya",
         "job_type":"Full Time",
@@ -78,7 +80,7 @@ We just created a dictionary with the keys title,location, job_type, employer, c
 * Dictionaries can also be created using the dict() constructor. To do this we pass the constructor a sequence of key-value pairs. We could also pass in named arguments. 
 Let's create a dictionary to represent the third row of data in the jobs.csv file, using both of these methods.
 
- ```
+ ```python
 # create an empty dictionary
 empty_property = dict()
 
@@ -93,7 +95,7 @@ job2 = dict([
 
 We passed a sequence, in this case a list of key-value tuples, to the dict() constructor to create our dictionary, and assigned it to the variable job2.
 
-```
+```python
 # Using keyword arguments
 dict(
   title="Marketing & Business Development Manager",
@@ -109,7 +111,7 @@ Here, we created a dictionary using named arguments. The keys are the argument n
 As we mentioned earlier on, dictionaries are indexed using their keys.
 To access a particular value in a dictionary we use the indexing operator (key inside square brackets). However, to use this method, we need to make sure the key we intend to retrieve exists, lest we get a KeyError. Checking for availability of a key is as easy as using the in operator.
 
-```
+```python
 # Check existence of title
 "title" in job2 # returns True
 
@@ -123,7 +125,7 @@ job2["title"] # return 'Marketing & Business Development Manager'
 * If you are like me, this is probably a lot of work. The good news, however, is that we have a better tool — the get() method. This method works by giving out a value if the key exists, or returning None. None sounds better than an error, right? 
 What if we want to go even further, and return something, a placeholder of sorts? get() takes a second argument, a default value to be used in place of None. Now let's use in to check if title exists in job2, then we can use indexing to retrieve its value. We'll also go ahead and use get() to retrieve salary from job2.
 
-```
+```python
 # Using get() method
 job2.get("title") # return 'Marketing & Business Development Manager'
 
@@ -148,7 +150,7 @@ Dictionaries can be modified directly using the keys or using the update() metho
 
 * Update the dictionary to include a new item (available) with a value of True.
 
-```
+```python
 # Adding a new entry for salary using the index
 job2["salary"] = 10000
 
@@ -169,7 +171,7 @@ To add a new entry, we use syntax similar to indexing. If the key exists, then t
 
 A particularly nice use case for update() is when we need to merge two dictionaries. Say we have another dictionary extra_info containing extra fields for a job, and we would like to merge this with job2.
 
-```
+```python
 extra_info = {
   "verified":True,
   "qualification":"Undergraduate Degree",
@@ -182,7 +184,7 @@ job2.update(extra_info)
 
 We can now remove the just created salary entry from job2, and remove everything from job1.
 
-```
+```python
 del job2["salary"]
 del job2["available"]
 print(job2) #return a dictionary without 'salary' and 'available' entries
@@ -213,7 +215,7 @@ Our dataset has about 860 listings, suppose we wanted to display the properties 
 
 Let’s iterate over job2 using a for-loop using all the three methods. Furthermore we'll use the csv module to read our csv-formatted data in to a list of dictionaries, then we'll iterate through all the dictionaries and print out the keys and values.
 
-```
+```python
 # Iterating through the dictionary itself
 for x in job2:
     print(x) # prints the keys of job2
@@ -252,7 +254,7 @@ If we use the items() iterable we could sort the items of our dictionary as we p
 
 Say we wanted to display the job details in the above example in alphabetical order, We would need to alter our iteration to give sorted results. Lets walk through the example again an see how we would achieve that functionality.
 
-```
+```python
 with open('jobs.csv','r') as csv_file:
     reader = csv.DictReader(csv_file)
     for job in reader:
@@ -287,7 +289,7 @@ To implement this functionality we use the iterable unpacking operator (**).
 What if we needed Job objects to work with, instead of dictionaries? We shouldn't have to do some heavy lifting to get our data reorganized in to objects. 
 Let's see how we could translate our dictionaries into objects, by again tweaking our previous code.
 
-```
+```python
 #Define a Job Class
 class Job:
     def __init__(self,
@@ -332,7 +334,7 @@ A possible candidate data type for this scenario would be the [OrderedDict](http
 
 * Dictionaries are well-designed to let us find a value instantly without necessarily having to search through the entire collection, hence we should not use loops for such an operation.
 
-```
+```python
 # How not to search for a value and return it
 key_i_need = "location"
 target = ""

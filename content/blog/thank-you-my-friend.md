@@ -1,7 +1,7 @@
 ---
 title: "Thank You My Friend"
 date: 2018-05-05T13:12:22+03:00
-draft: false
+draft: true
 categories:
     - Personal
 tags:
