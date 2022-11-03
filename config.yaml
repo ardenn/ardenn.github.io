@@ -2,9 +2,10 @@ baseURL: https://makalila.dev/
 languageCode: en-us
 title: Rodgers Ouma | First of his name
 params:
+  mastodon: mastodon.social/@makalila
   name: "Rodgers Ouma"
   gtag: G-K0WW8J5FNZ
-  description: "Rodgers Ouma's personal website. My home on the internet."
+  description: "Rodgers Ouma's personal website. My home on the web."
   title: "Rodgers Ouma - The first of his name"
   keywords: "rodgers ouma,makalila,ouma rodgers,mc'alila,twiga foods,rodgers,ouma,mc_alila,mcalila,personal website,python,kenya,maseno school,jkuat,software,software developer,actuarial science,alila,mest africa,homa bay,software engineering kenya,django,python kenya,angular,software,build app,mobile app"
 build:
