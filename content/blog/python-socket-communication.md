@@ -1,6 +1,7 @@
 ---
 title: "Python Socket Communication"
 date: 2019-02-02T13:23:50+03:00
+description: "Network programming with Python's socket module, from address families and socket types to a working client and server."
 draft: false
 categories:
     - Programming

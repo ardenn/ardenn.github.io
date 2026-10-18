@@ -1,6 +1,7 @@
 ---
 title: "JSON the Python Way"
 date: 2018-10-06T13:23:38+03:00
+description: "Reading, writing and converting JSON data in Python with the built-in json module."
 draft: false
 categories:
     - Programming
@@ -41,7 +42,7 @@ Generally, the json module encodes Python objects as JSON strings implemented by
 
 By default, the JSON encoder only understands native Python data types (str, int, float, bool, list, tuple, and dict). The json module provides two very handy methods for serialization based on the conversion table below:
 
-![Python — JSON conversion](https://cdn-images-1.medium.com/max/2000/1*PA8yUhgId2jyIrJULvNbvw.png)
+![Python — JSON conversion](python-to-json.png)
 
 * `dumps()` — to serialize an object to a JSON formatted string.
 
@@ -106,7 +107,7 @@ This example writes a user.json file to disk with similar content as in the prev
 
 As in the case of serialization, the decoder converts JSON encoded data into native Python data types as in the table below:
 
-![JSON — Python conversion](https://cdn-images-1.medium.com/max/2000/1*uMSJMK2XLpDBfPABFZ9kTg.png)
+![JSON — Python conversion](json-to-python.png)
 
 The json module exposes two other methods for deserialization.
 

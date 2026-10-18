@@ -1,6 +1,7 @@
 ---
 title: "Python Data Analysis - Getting Started"
 date: 2018-05-09T13:23:08+03:00
+description: "Setting up a Python data analysis environment on a fresh Ubuntu 18.04 install, with Jupyter, NumPy, pandas and friends."
 draft: false
 categories:
     - Programming

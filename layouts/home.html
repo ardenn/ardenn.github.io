@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="prose">
+  {{ .Content }}
+</div>
+{{ with first 3 (where site.RegularPages "Section" "blog") }}
+<section class="mt-16" aria-labelledby="latest">
+  <div class="mb-6 flex items-baseline justify-between gap-4">
+    <h2 id="latest" class="text-sm font-medium tracking-wide text-muted uppercase">Latest posts</h2>
+    {{ with site.GetPage "/blog" }}<a href="{{ .RelPermalink }}" class="link-quiet text-sm">All posts →</a>{{ end }}
+  </div>
+  {{ partial "post-list.html" . }}
+</section>
+{{ end }}
+{{ end }}

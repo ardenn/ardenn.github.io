@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article>
+  <header class="mb-10">
+    <h1 class="text-2xl leading-snug font-semibold text-balance sm:text-3xl">{{ .Title }}</h1>
+    <p class="mt-4 flex flex-wrap gap-x-3 text-sm text-muted">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      {{ with .GetTerms "categories" }}
+      <span aria-hidden="true">·</span>
+      <a href="{{ (index . 0).RelPermalink }}" class="link-quiet">{{ (index . 0).LinkTitle }}</a>
+      {{ end }}
+      <span aria-hidden="true">·</span>
+      <span>{{ .ReadingTime }} min read</span>
+    </p>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+  {{ with .GetTerms "tags" }}
+  <ul class="mt-12 flex flex-wrap gap-x-4 gap-y-2" aria-label="Tags">
+    {{ range . }}<li><a href="{{ .RelPermalink }}" class="tag">#{{ .LinkTitle | lower }}</a></li>{{ end }}
+  </ul>
+  {{ end }}
+</article>
+{{ $posts := where site.RegularPages "Section" .Section }}
+{{ $newer := $posts.Next . }}
+{{ $older := $posts.Prev . }}
+{{ if or $newer $older }}
+<nav class="mt-16 grid gap-6 border-t border-line pt-8 text-sm sm:grid-cols-2" aria-label="More posts">
+  <div>{{ with $older }}<span class="block text-muted">← Older</span><a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a>{{ end }}</div>
+  <div class="sm:text-right">{{ with $newer }}<span class="block text-muted">Newer →</span><a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a>{{ end }}</div>
+</nav>
+{{ end }}
+{{ end }}

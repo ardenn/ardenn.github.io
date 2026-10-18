@@ -1,0 +1,7 @@
+{{ if gt .TotalPages 1 }}
+<nav class="mt-12 flex items-center justify-between text-sm" aria-label="Pagination">
+  <span>{{ with .Prev }}<a href="{{ .URL }}" class="link-quiet">← Newer</a>{{ end }}</span>
+  <span class="text-muted">{{ .PageNumber }} / {{ .TotalPages }}</span>
+  <span>{{ with .Next }}<a href="{{ .URL }}" class="link-quiet">Older →</a>{{ end }}</span>
+</nav>
+{{ end }}
