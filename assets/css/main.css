@@ -262,6 +262,12 @@
 .prose :where(del, .comment)::after {
   content: " */";
 }
+.prose :where(.highlight) {
+  color: var(--accent);
+  font-weight: 600;
+  background: linear-gradient(to top, color-mix(in oklab, var(--accent) 18%, transparent) 40%, transparent 40%);
+  padding: 0 0.15em;
+}
 .prose :where(hr) {
   border-color: var(--line);
 }

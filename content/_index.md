@@ -9,7 +9,8 @@ a software engineer from ~~Homa Bay,~~ Kenya 🇰🇪, now based in London. Most
 systems, from APIs and distributed services down to the data and infrastructure beneath them.
 
 These days I mostly write <span class="comment">prompt</span> Go, with the occasional bit of Rust, Kotlin and, against
-my will, JavaScript. I'm still finding my way through the brave new _agentic_ world, one token at a time.
+my will, JavaScript. I'm still finding my way through the brave new <em class="highlight">agentic</em> world, one
+token at a time.
 
 Away from work you'll find me tinkering with my self-hosted setup, learning 3D modelling and printing, or out on
 a bike (read bicycle 😅).
