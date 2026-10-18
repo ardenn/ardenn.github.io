@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="bg-bg text-fg antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-10 focus:bg-bg focus:px-3 focus:py-2">Skip to content</a>
+  <div class="mx-auto flex min-h-dvh max-w-2xl flex-col px-5 py-8 sm:py-12">
+    {{ partial "header.html" . }}
+    <main id="main" class="flex-1 py-12 sm:py-16">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+</body>
+</html>

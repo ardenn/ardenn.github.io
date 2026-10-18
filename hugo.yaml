@@ -1,0 +1,63 @@
+baseURL: https://makalila.dev/
+locale: en-gb
+title: Rodgers Ouma | First of his name
+params:
+  name: "Rodgers Ouma"
+  goatcounter: makalila
+  description: "Rodgers Ouma's personal website. My home on the web."
+menus:
+  main:
+    - name: posts
+      pageRef: /blog
+      weight: 1
+    - name: tags
+      pageRef: /tags
+      weight: 2
+  social:
+    - name: GitHub
+      url: https://github.com/ardenn
+      weight: 1
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/rodgers-ouma
+      weight: 2
+    - name: Bluesky
+      url: https://bsky.app/profile/makalila.dev
+      weight: 3
+    - name: Mastodon
+      url: https://mastodon.social/@makalila
+      weight: 4
+      params:
+        rel: me
+    - name: Twitter
+      url: https://twitter.com/mc_alila
+      weight: 5
+build:
+  buildStats:
+    enable: true
+  cachebusters:
+    - source: assets/notwatching/hugo_stats\.json
+      target: css
+module:
+  mounts:
+    - source: assets
+      target: assets
+    - source: hugo_stats.json
+      target: assets/notwatching/hugo_stats.json
+      disableWatch: true
+pagination:
+  pagerSize: 5
+markup:
+  highlight:
+    noClasses: false
+    style: github
+  goldmark:
+    renderer:
+      unsafe: true
+security:
+  exec:
+    allow: ['^((dart-)?sass|go|git|node|postcss|tailwindcss)$']
+cascade:
+  - target:
+      path: "{/blog/**}"
+    build:
+      publishResources: false

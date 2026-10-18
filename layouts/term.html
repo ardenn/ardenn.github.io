@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="mb-10 flex items-baseline justify-between gap-4">
+  <h1 class="text-2xl font-semibold"><span class="text-accent">#</span>{{ .Title | lower }}</h1>
+  {{ with .Parent }}<a href="{{ .RelPermalink }}" class="link-quiet text-sm">All {{ .Title | lower }} →</a>{{ end }}
+</div>
+{{ $paginator := .Paginate .Pages }}
+{{ partial "post-list.html" $paginator.Pages }}
+{{ partial "pagination.html" $paginator }}
+{{ end }}

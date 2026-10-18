@@ -1,0 +1,9 @@
+<footer class="flex flex-col gap-3 border-t border-line pt-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+  <p>© {{ now.Year }} {{ site.Params.name }}</p>
+  <ul class="flex flex-wrap gap-x-5 gap-y-2">
+    {{ range site.Menus.social }}
+    <li><a href="{{ .URL }}" class="link-quiet"{{ with .Params.rel }} rel="{{ . }}"{{ end }}>{{ .Name }}</a></li>
+    {{ end }}
+    {{ with site.Home.OutputFormats.Get "rss" }}<li><a href="{{ .RelPermalink }}" class="link-quiet">RSS</a></li>{{ end }}
+  </ul>
+</footer>

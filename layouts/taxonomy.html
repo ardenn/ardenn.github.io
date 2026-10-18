@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1 class="mb-10 text-2xl font-semibold">{{ .Title }}</h1>
+<ul class="flex flex-wrap gap-x-5 gap-y-3">
+  {{ range .Data.Terms.ByCount }}
+  <li>
+    <a href="{{ .Page.RelPermalink }}" class="tag">#{{ .Page.Title | lower }}</a>
+    <span class="text-sm text-muted">{{ .Count }}</span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

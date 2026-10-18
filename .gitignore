@@ -22,3 +22,4 @@ secrets.txt
 node_modules
 dist/
 .cache
+/assets/notwatching/

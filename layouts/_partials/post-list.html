@@ -1,0 +1,8 @@
+<ul class="space-y-4">
+  {{ range . }}
+  <li class="grid gap-x-6 sm:grid-cols-[7.5rem_1fr]">
+    <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm leading-7 text-muted tabular-nums">{{ .Date.Format "2006-01-02" }}</time>
+    <a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>

@@ -1,6 +1,7 @@
 ---
 title: "Thank You My Friend"
 date: 2018-05-05T13:12:22+03:00
+description: "A note of thanks to a friend, and a look back at eight months of growth."
 draft: true
 categories:
     - Personal

@@ -1,6 +1,7 @@
 ---
 title: "Python Dictionaries"
 date: 2018-10-03T13:23:26+03:00
+description: "A tour of Python's dictionary type: creating, accessing, updating and iterating over key-value mappings."
 draft: false
 categories:
     - Programming
@@ -18,7 +19,7 @@ The Python programming language natively implements a number of data structures.
 
 ## What are dictionaries ?
 
-![key-value mapping](https://cdn-images-1.medium.com/max/2000/1*oNuaSOlSozUchdxiOE1ieQ.jpeg)
+![key-value mapping](key-value-mapping.jpeg)
 
 A dictionary in python is a mapping object that maps keys to values, where the keys are unique within a collection and the values can hold any arbitrary value. In addition to being unique, keys are also required to be hashable.
 
@@ -357,7 +358,9 @@ Most dictionary operations have a time complexity of O(1) — implying that the 
 Creating a dictionary runs in a linear time of O(N), where “N” is the number of key-value pairs. 
 Similarly, all iterations run in O(N) since the loop has to run N times.
 
-![Dictionary Operations — [https://www.ics.uci.edu/~brgallar/week8_2.html](https://www.ics.uci.edu/~brgallar/week8_2.html)](https://cdn-images-1.medium.com/max/2000/1*7m8zUws--GJbd_4UorQVYQ.png)
+![Dictionary operations](dictionary-operations.png)
+
+_Source: [ics.uci.edu](https://www.ics.uci.edu/~brgallar/week8_2.html)_
 
 ## Conclusion
 

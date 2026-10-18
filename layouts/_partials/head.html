@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ $title := cond .IsHome site.Title (printf "%s · %s" .Title site.Params.name) }}
+<title>{{ $title }}</title>
+{{ $description := or .Description (cond .IsPage (.Summary | plainify | truncate 160) "") site.Params.description }}
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ site.Params.name }}">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">{{ end }}
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+<link rel="preload" href="{{ "fonts/ibm-plex-mono-latin-400-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+{{ partial "opengraph.html" . }}
+{{ partial "twitter_cards.html" . }}
+<script>
+  try {
+    const theme = localStorage.getItem("theme");
+    const dark = theme ? theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.classList.toggle("dark", dark);
+  } catch (e) {}
+</script>
+{{ with (templates.Defer (dict "key" "global")) }}
+  {{ partial "css.html" . }}
+{{ end }}
+{{ with resources.Get "js/main.js" }}
+  {{ $js := . | js.Build (dict "minify" hugo.IsProduction) | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}
+{{ partial "analytics.html" . }}

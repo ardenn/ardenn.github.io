@@ -1,0 +1,14 @@
+{{ $light := css.ChromaStyles (dict "targetPath" "css/chroma-light.css" "mode" "light") }}
+{{ $dark := css.ChromaStyles (dict "targetPath" "css/chroma-dark.css" "mode" "dark" "modeSelector" true) }}
+{{ with resources.Get "css/main.css" }}
+  {{ $opts := dict "minify" (not hugo.IsDevelopment) "importContext" (slice $light $dark) }}
+  {{ with . | css.TailwindCSS $opts }}
+    {{ if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else }}
+      {{ with . | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
