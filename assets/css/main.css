@@ -55,7 +55,7 @@
   --fg: #23211e;
   --muted: #6e6a63;
   --line: #e4dfd7;
-  --accent: #b5502a;
+  --accent: #96680a;
   --surface: #f1ede6;
   --prompt-dir: #0e7490;
   --prompt-ok: #2f8a4c;
@@ -66,7 +66,7 @@
   --fg: #e6e2db;
   --muted: #9a958c;
   --line: #2e2b27;
-  --accent: #ef9467;
+  --accent: #e3b552;
   --surface: #1f1d1a;
   --prompt-dir: #5fd0e0;
   --prompt-ok: #74d68e;
@@ -234,9 +234,11 @@
 .prose :where(:not(pre) > code) {
   font-weight: 500;
   font-size: 0.875em;
-  background: var(--surface);
+  color: color-mix(in oklab, var(--accent) 70%, var(--fg));
+  background: color-mix(in oklab, var(--accent) 8%, var(--bg));
+  border: 1px solid color-mix(in oklab, var(--accent) 22%, var(--bg));
   border-radius: 0.25rem;
-  padding: 0.15em 0.35em;
+  padding: 0.1em 0.35em;
 }
 .prose :where(:not(pre) > code)::before,
 .prose :where(:not(pre) > code)::after {
@@ -268,7 +270,7 @@
 .prose :where(del, .comment)::after {
   content: " */";
 }
-.prose :where(.highlight) {
+.prose :where(:not(div).highlight) {
   color: var(--accent);
   font-weight: 600;
   background: linear-gradient(to top, color-mix(in oklab, var(--accent) 18%, transparent) 40%, transparent 40%);
