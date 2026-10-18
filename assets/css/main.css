@@ -80,6 +80,12 @@
 @layer base {
   html {
     font-size: 100%;
+    @media (width >= 80rem) {
+      font-size: 106.25%;
+    }
+    @media (width >= 100rem) {
+      font-size: 112.5%;
+    }
     color-scheme: light;
     -webkit-text-size-adjust: 100%;
   }
