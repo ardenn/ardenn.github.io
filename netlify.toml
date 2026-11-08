@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --gc --minify"
+  command = "git fetch --unshallow || true; hugo --gc --minify"
   publish = "public"
 
 [build.environment]
@@ -7,10 +7,10 @@
   NODE_VERSION = "24"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "git fetch --unshallow || true; hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "git fetch --unshallow || true; hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [[headers]]
   for = "/*"

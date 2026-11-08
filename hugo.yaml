@@ -1,6 +1,9 @@
 baseURL: https://makalila.dev/
 locale: en-gb
 title: Rodgers Ouma | First of his name
+enableGitInfo: true
+frontmatter:
+  lastmod: [":git", "lastmod", "date"]
 params:
   name: "Rodgers Ouma"
   goatcounter: makalila
